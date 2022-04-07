@@ -1,0 +1,59 @@
+<nav class="navbar has-text-weight-semibold is-size-6" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu add-shadow is-unselectable">
+    <div class="navbar-start ml-5">
+      <a class="navbar-item">
+        Home
+      </a>
+      <a class="navbar-item">
+        History
+      </a>
+      <a class="navbar-item">
+        Top 10
+      </a>
+      <a class="navbar-item">
+        Upcoming
+      </a>
+    </div>
+    <div class="navbar-end ml-5">
+      <div class="navbar-item mr-5 has-text-orange">
+        <a class="hi-user has-text-weight-bold">Hi, user
+        </a>
+        <img class="pl-5" src="assets/images/mock-user.png" alt="Click for settings">
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="section m-5">
+  <div class="movie-container">
+    <div *ngFor="let movie of movieList">
+      <div class="card has-rounded-corners">
+        <div class="card-image add-shadow is-relative has-rounded-corners">
+          <figure class="image">
+            <div class="is-overlay">
+              <div class="movie-gradient is-unselectable"></div>
+              <div class="movie-percentage has-text-centered has-text-weight-bold is-unselectable">{{movie.recommendationPercent}}%</div>
+              <div class="is-bold is-on-bottom p-3 is-size-3 has-text-weight-bold has-text-white">{{movie.name}}</div>
+            </div>
+            <img class="is-unselectable" src="{{movie.movieImage}}" alt="{{movie.name}}">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="content">
+            <a class="has-text-weight-semibold is-size-5 is-unselectable" (click)="movie.added()" >
+              {{movie.movieAdded ? 'Movie added to watchlist' : 'Add movie to watchlist'}}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
