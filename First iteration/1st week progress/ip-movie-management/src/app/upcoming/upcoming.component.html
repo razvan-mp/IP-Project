@@ -1,0 +1,22 @@
+<div class="movie-container">
+  <div *ngFor="let movie of upcomingMovieList">
+    <div class="card has-rounded-corners">
+      <div class="card-image add-shadow is-relative has-rounded-corners">
+        <figure class="image">
+          <div class="is-overlay">
+            <div class="movie-gradient is-unselectable"></div>
+            <div class="is-bold is-on-bottom p-3 is-size-3 has-text-weight-bold has-text-white">{{movie.name}}</div>
+          </div>
+          <img class="is-unselectable" src="{{movie.movieImage}}" alt="{{movie.name}}">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="content">
+          <a class="has-text-weight-semibold is-size-5 is-unselectable" (click)="movie.readMore('https://www.imdb.com/title/tt2428170/')" >
+            {{movie.movieReadMore ? 'Read more' : 'Read more'}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
