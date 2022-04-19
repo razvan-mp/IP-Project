@@ -4,6 +4,7 @@ export class MovieModel {
   recommendationPercent: number | undefined;
   movieImage: string | undefined;
   movieAdded: boolean | undefined;
+  movieReadMore : boolean | undefined;
 
 
   constructor(id: number | undefined, name: string | undefined, recommendationPercent: number | undefined, movieImage: string | undefined, movieAdded: boolean | undefined) {
@@ -18,4 +19,12 @@ export class MovieModel {
     this.movieAdded = !this.movieAdded;
     return this.movieAdded;
   }
+
+  readMore(url: string) {
+    this.movieReadMore = !this.movieReadMore;
+    window.open(url, "_blank");
+
+    return this.movieReadMore;
+  }
+
 }
