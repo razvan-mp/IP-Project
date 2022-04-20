@@ -1,36 +1,4 @@
-<nav class="navbar has-text-weight-semibold is-size-6" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div class="navbar-menu add-shadow is-unselectable">
-    <div class="navbar-start ml-5">
-      <a class="navbar-item" routerLink="/home">
-        Home
-      </a>
-      <a class="navbar-item">
-        History
-      </a>
-      <a class="navbar-item" routerLink="/top10">
-        Top 10
-      </a>
-        <a class="navbar-item" routerLink="/upcoming">
-          Upcoming
-        </a>
-    </div>
-    <div class="navbar-end ml-5">
-      <div class="navbar-item mr-5 has-text-orange">
-        <a class="hi-user has-text-weight-bold">Hi, user
-        </a>
-        <img class="pl-5" src="assets/images/mock-user.png" alt="Click for settings">
-      </div>
-    </div>
-  </div>
-</nav>
+<app-navigation></app-navigation>
 
 <section class="section m-5">
   <router-outlet></router-outlet>

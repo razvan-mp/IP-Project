@@ -6,19 +6,25 @@ import { AppComponent } from './app.component';
 import { UpcomingComponent } from './upcoming/upcoming.component';
 import { HomeComponent } from './home/home.component';
 import { Top10Component } from './top10/top10.component';
+import {NgImageSliderModule} from "ng-image-slider";
+import {NavigationComponent} from "./navigation/navigation.component";
+import {HistoryPageComponent} from "./history-page/history-page.component";
 //import {NgImageSliderModule} from "ng-image-slider";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UpcomingComponent,
-    HomeComponent,
-    Top10Component
-  ],
+    declarations: [
+        AppComponent,
+        UpcomingComponent,
+        HomeComponent,
+        Top10Component,
+        NavigationComponent,
+        HistoryPageComponent
+    ],
   imports: [
-   // NgImageSliderModule,
+    // NgImageSliderModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

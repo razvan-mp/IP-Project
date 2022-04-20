@@ -1,0 +1,55 @@
+.main-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5em;
+}
+
+.box3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.card {
+  max-width: unset;
+  position: relative;
+}
+
+.button-custom {
+  display: inline-block;
+  border-radius: 15px;
+  background-color: darkorange;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 20px;
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button-custom span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-custom span:after {
+  content: '🗑️';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-custom:hover span {
+  padding-right: 25px;
+}
+
+.button-custom:hover span:after {
+  opacity: 1;
+  right: 0;
+}
