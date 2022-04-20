@@ -1,36 +1,38 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {UpcomingComponent} from './upcoming/upcoming.component';
-import {HomeComponent} from './home/home.component';
-import {Top10Component} from './top10/top10.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { UpcomingComponent } from './upcoming/upcoming.component';
+import { HomeComponent } from './home/home.component';
+import { Top10Component } from './top10/top10.component';
 import {NgImageSliderModule} from "ng-image-slider";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NavigationComponent} from "./navigation/navigation.component";
-import {RouterModule} from "@angular/router";
-import { HistoryComponent } from './history/history.component';
+import {HistoryPageComponent} from "./history-page/history-page.component";
 
-//import {NgImageSliderModule} from "ng-image-slider";
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UpcomingComponent,
-    HomeComponent,
-    Top10Component,
-    NavigationComponent,
-    HistoryComponent
-  ],
+    declarations: [
+        AppComponent,
+        UpcomingComponent,
+        HomeComponent,
+        Top10Component,
+        NavigationComponent,
+        HistoryPageComponent,
+    ],
   imports: [
-    // NgImageSliderModule,
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
-    NgImageSliderModule,
-    RouterModule
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule {
+
+
 }
