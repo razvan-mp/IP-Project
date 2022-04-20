@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 $drop-shadow-color: rgba(218, 218, 218, 0.37);
 
 .image {
@@ -106,4 +108,60 @@ a {
   color: black;
   text-decoration: none;
   transition: all 200ms;
+}
+
+.button-custom {
+  background: darkorange;
+}
+
+.button-custom:hover {
+  background: black;
+  color: white;
+}
+
+.has-header-thickness {
+  text-decoration-thickness: 0.0925em !important;
+  opacity: 90%;
+}
+
+.input {
+  font-size: large;
+  font-weight: 600;
+  height: 70px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.02);
+}
+
+.input:focus {
+  transform: scale(1.01);
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.05);
+  transition: all 200ms;
+}
+
+.input:hover {
+  transform: scale(1.01);
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.05);
+  transition: all 200ms;
+}
+
+.input[placeholder] {
+  font-size: large;
+  font-weight: 600;
+}
+
+input {
+  outline: none;
+  padding: 30px;
+}
+
+.field {
+  width: 40%;
+}
+
+.section {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
 }

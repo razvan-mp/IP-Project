@@ -157,8 +157,10 @@ input {
   width: 40%;
 }
 
-a:active {
-  color: darkorange;
+.section {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
 }
 
-/*# sourceMappingURL=navigation.component.css.map */
+/*# sourceMappingURL=home.component.css.map */
