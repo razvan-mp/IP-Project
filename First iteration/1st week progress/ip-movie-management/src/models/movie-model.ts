@@ -5,6 +5,7 @@ export class MovieModel {
   movieImage: string | undefined;
   movieAdded: boolean | undefined;
   movieReadMore : boolean | undefined;
+  movieComingSoonDate : string | undefined;
 
 
   constructor(id: number | undefined, name: string | undefined, recommendationPercent: number | undefined, movieImage: string | undefined, movieAdded: boolean | undefined) {
@@ -27,4 +28,7 @@ export class MovieModel {
     return this.movieReadMore;
   }
 
+  setComingSoonDate(movieDate : string) {
+    this.movieComingSoonDate = movieDate;
+  }
 }
