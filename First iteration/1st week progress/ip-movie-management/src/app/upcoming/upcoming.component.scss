@@ -11,8 +11,8 @@ $drop-shadow-color: rgba(218, 218, 218, 0.37);
 
 .movie-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(100%/4), 1fr));
-  grid-gap: 6em;
+  grid-template-columns: repeat(auto-fill, minmax(calc(100%/4), 1fr));
+  grid-gap: 1.5em;
 }
 
 .movie-percentage {
