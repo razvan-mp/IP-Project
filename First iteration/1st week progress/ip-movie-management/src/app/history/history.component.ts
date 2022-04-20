@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {MovieModel} from "../../../../../../../ip-movie-management/src/models/movie-model";
+import {MovieModel} from "../../models/movie-model";
 
 @Component({
-  selector: 'app-history-page',
-  templateUrl: './history-page.component.html',
-  styleUrls: ['./history-page.component.scss']
+  selector: 'app-history',
+  templateUrl: './history.component.html',
+  styleUrls: ['./history.component.scss']
 })
-export class HistoryPageComponent implements OnInit {
+export class HistoryComponent implements OnInit {
   movieList: MovieModel[] = [];
 
   constructor() {
@@ -21,5 +21,4 @@ export class HistoryPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
