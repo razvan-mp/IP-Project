@@ -4,13 +4,21 @@ import {UpcomingComponent} from "./upcoming/upcoming.component";
 import {HomeComponent} from "./home/home.component";
 import {Top10Component} from "./top10/top10.component";
 import {HistoryComponent} from "./history/history.component";
+import {DashboardComponent} from "./dashboard/dashboard.component";
+import {WhiteUserComponent} from "./white-user/white-user.component";
+import {RemoveMovieComponent} from "./remove-movie/remove-movie.component";
+import {RemoveUserComponent} from "./remove-user/remove-user.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
   {path: 'home', component: HomeComponent},
   {path: 'upcoming', component: UpcomingComponent},
   {path: 'top10', component: Top10Component},
-  {path: 'history', component: HistoryComponent}
+  {path: 'history', component: HistoryComponent},
+  {path: 'dashboard', component: DashboardComponent},
+  {path: 'white-user', component: WhiteUserComponent},
+  {path: 'remove-movie', component: RemoveMovieComponent},
+  {path: 'remove-user', component: RemoveUserComponent}
 ];
 
 @NgModule({

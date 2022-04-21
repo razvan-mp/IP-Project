@@ -1,0 +1,162 @@
+<section>
+  <div class="tabs is-toggle is-fullwidth has-text-weight-semibold is-size-5">
+    <ul>
+      <li class="is-active">
+        <a routerLink="/dashboard">
+          <span>Add movie</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/remove-movie">
+          <span>Remove movie</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/white-user">
+          <span>Whitelist user</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/remove-user">
+          <span>Remove user</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="card mt-5">
+  <div class="container p-6">
+
+    <div class="field">
+      <h2 class="is-size-4 has-text-weight-bold is-underlined">Enter information: </h2>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-body pt-3 pb-5">
+        <div class="field">
+          <p class="control is-expanded">
+            <input class="input" type="text" placeholder="Movie name">
+          </p>
+        </div>
+        <div class="field">
+          <p class="control is-expanded">
+            <input class="input" type="link" placeholder="Poster image link">
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown-divider mt-2 mb-3"></div>
+
+    <div class="field is-horizontal">
+      <div class="field-body pt-3 pb-3">
+        <div class="field">
+          <label class="label">Already released?</label>
+          <div class="control">
+            <label class="radio pr-4">
+              <input type="radio" name="member">
+              Yes
+            </label>
+            <label class="radio pl-4">
+              <input type="radio" name="member">
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="field-body pt-3 pb-3">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="Release year">
+          </div>
+        </div>
+      </div>
+
+      <div class="field-body pt-3 pb-3">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="Runtime">
+          </div>
+        </div>
+      </div>
+
+      <div class="field-body pt-3 pb-3">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="IMDb Rating">
+          </div>
+        </div>
+      </div>
+
+      <div class="field-body pt-3 pb-3">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="Meta Score">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="field-body pt-3 pb-3">
+        <div class="field is-narrow">
+          <div class="control">
+            <div class="select">
+              <select>
+                <option>Action</option>
+                <option>Adventure</option>
+                <option>Animation</option>
+                <option>Biography</option>
+                <option>Comedy</option>
+                <option>Crime</option>
+                <option>Drama</option>
+                <option>Family</option>
+                <option>Fantasy</option>
+                <option>Film</option>
+                <option>History</option>
+                <option>Horror</option>
+                <option>Music</option>
+                <option>Musical</option>
+                <option>Mystery</option>
+                <option>Noir</option>
+                <option>Romance</option>
+                <option>Sci- Fi</option>
+                <option>Sport</option>
+                <option>Thriller</option>
+                <option>War</option>
+                <option>Western</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown-divider mt-2 mb-4"></div>
+
+    <div class="field is-horizontal">
+      <div class="field-body is-expanded pt-3 pb-3">
+        <div class="field">
+          <div class="control">
+            <textarea class="textarea" placeholder="Movie description"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-body pt-3 pb-3">
+        <div class="field">
+          <div class="control is-flex is-flex-direction-row">
+            <button class="button is-primary mr-4">
+              Add movie
+            </button>
+            <button class="button is-family-secondary">
+              Reset fields
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
