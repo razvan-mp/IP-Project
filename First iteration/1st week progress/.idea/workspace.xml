@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="daf83849-431f-475d-9a97-739a51839c64" name="Changes" comment="" />
+    <list default="true" id="daf83849-431f-475d-9a97-739a51839c64" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Learning/my-app" beforeDir="false" afterPath="$PROJECT_DIR$/../Learning/my-app" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,8 +26,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../IP" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ip-movie-management" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\facultate\IP\IP-Project\First iteration\1st week progress\ip-movie-management\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Node.js/Chrome.Unnamed">
@@ -48,6 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1650378657845</updated>
       <workItem from="1650378659125" duration="159000" />
+      <workItem from="1650450111151" duration="930000" />
     </task>
     <servers />
   </component>

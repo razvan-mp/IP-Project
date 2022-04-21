@@ -10,21 +10,11 @@ export class UpcomingComponent {
   upcomingMovieList: MovieModel[] = [];
 
   constructor() {
-    let movie1 = new MovieModel(1, "The Batman", 0, "https://ychef.files.bbci.co.uk/976x549/p0brnp0b.jpg", false);
-    let movie2 = new MovieModel(2, "Inception", 0, "https://hbomax-images.warnermediacdn.com/images/GYDbfcQGssU-dEAEAAAAI/tileburnedin?size=1280x720&partner=hbomaxcom&v=ef0fcab17a9eaa6196b1dd20a93284c6&language=ro-ro&host=art-gallery.api.hbo.com&w=Infinity", false);
-    let movie3 = new MovieModel(3, "Vikings", 0, "https://variety.com/wp-content/uploads/2014/02/vikings-tv-review.jpg?w=681&h=383&crop=1", false);
-    let movie4 = new MovieModel(4, "The Queen's Gambit", 0, "https://www.andreearaicu.ro/wp-content/uploads/2021/01/the-queens-gambit-feature.jpg", false);
-    let movie5 = new MovieModel(5, "Shrek Forever After", 0, "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABWeRaV8fK4jTdQ8VUKFmTozbYGTxDowza_sv_vlN7xvuljC7XUlOjMuWeSovPx4JtoCSou7CvaraxJEQe78sSrZoyqIP.jpg?r=26a", false);
-    let movie6 = new MovieModel(6, "Hotel Transylvania", 0, "https://m.media-amazon.com/images/M/MV5BNDRkYjgyOTMtZjgyMy00ZGRmLWJhZTktZGU0NTVlNzQ4YmEyXkEyXkFqcGdeQXNuZXNodQ@@._V1_.jpg", false);
+    let movie1 = new MovieModel(1, "Avengers 4", 86, "https://noonecares.me/wp-content/uploads/2018/12/1-10.jpg", false, "https://www.studiocanal.com/title/the-electrical-life-of-louis-wain-2020/");
+    let movie2 = new MovieModel(2, "The Electrical Life of Louis Wain", 79, "https://hubmarketlive.blob.core.windows.net/media/65263009-30ca-401f-b0aa-e704895e848c.jpg", false, "https://www.studiocanal.com/title/the-electrical-life-of-louis-wain-2020/");
+    let movie3 = new MovieModel(3, "The secrets of Dumbledore", 66, "https://media.bluecinema.ch/filer_public_thumbnails/cinepool/assets/movies/1013.400/artworks/5bb45620ce62809b14066e85566e9bec919ab7ac/5e60b9b98b559f135f7ea90ebfea9305/lrg.png__650x935_q70.jpg", false, "https://www.studiocanal.com/title/the-electrical-life-of-louis-wain-2020/");
 
-    movie1.setComingSoonDate("This Thursday");
-    movie2.setComingSoonDate("This Sunday");
-    movie3.setComingSoonDate("29.04.2022");
-    movie4.setComingSoonDate("03.05.2022");
-    movie5.setComingSoonDate("16.05.2022");
-    movie6.setComingSoonDate("29.06.2022");
-
-    this.upcomingMovieList.push(movie1, movie2, movie3, movie4, movie5, movie6);
+    this.upcomingMovieList.push(movie1, movie2, movie3);
   }
 
 }
