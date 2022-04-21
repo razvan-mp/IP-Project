@@ -9,11 +9,12 @@ import {Top10Component} from './top10/top10.component';
 import {NgImageSliderModule} from "ng-image-slider";
 import {NavigationComponent} from "./navigation/navigation.component";
 import {RouterModule} from "@angular/router";
-import { HistoryComponent } from './history/history.component';
+import { HistoryPageComponent } from './history-page/history-page.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RemoveMovieComponent } from './remove-movie/remove-movie.component';
 import { WhiteUserComponent } from './white-user/white-user.component';
 import { RemoveUserComponent } from './remove-user/remove-user.component';
+import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
 
 //import {NgImageSliderModule} from "ng-image-slider";
 
@@ -24,7 +25,7 @@ import { RemoveUserComponent } from './remove-user/remove-user.component';
     HomeComponent,
     Top10Component,
     NavigationComponent,
-    HistoryComponent,
+    HistoryPageComponent,
     DashboardComponent,
     RemoveMovieComponent,
     WhiteUserComponent,
@@ -35,7 +36,8 @@ import { RemoveUserComponent } from './remove-user/remove-user.component';
     BrowserModule,
     AppRoutingModule,
     NgImageSliderModule,
-    RouterModule
+    RouterModule,
+    NgbCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
