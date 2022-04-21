@@ -177,4 +177,8 @@ body {
   text-decoration: none;
 }
 
+.container {
+  margin-top: -18px;
+}
+
 /*# sourceMappingURL=upcoming.component.css.map */
