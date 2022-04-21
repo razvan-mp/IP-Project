@@ -10,6 +10,7 @@ import {NgImageSliderModule} from "ng-image-slider";
 import {NavigationComponent} from "./navigation/navigation.component";
 import {RouterModule} from "@angular/router";
 import { HistoryComponent } from './history/history.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 //import {NgImageSliderModule} from "ng-image-slider";
 
@@ -20,7 +21,8 @@ import { HistoryComponent } from './history/history.component';
     HomeComponent,
     Top10Component,
     NavigationComponent,
-    HistoryComponent
+    HistoryComponent,
+    DashboardComponent
   ],
   imports: [
     // NgImageSliderModule,
