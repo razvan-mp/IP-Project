@@ -1,20 +1,21 @@
-<div class="movie-container">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+<div class="container">
   <div *ngFor="let movie of upcomingMovieList">
-    <div class="card has-rounded-corners">
-      <div class="card-image add-shadow is-relative has-rounded-corners">
-        <figure class="image">
-          <div class="movie-gradient is-unselectable"></div>
-          <img class="image is-unselectable" src="{{movie.movieImage}}" alt="{{movie.name}}">
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="content is-flex is-justify-content-space-between">
-          <div class="is-bold is-italic p-0 is-size-5 has-text-weight-bold">{{movie.name}}</div>
-          <button class="button-custom has-text-weight-semibold is-size-6 is-unselectable" (click)="movie.readMore()" >
-            <span>{{movie.movieReadMore ? 'Read more' : 'Read more'}}</span>
-          </button>
+    <div class="card has-rounded-corners m-4">
+      <figure class="card__thumb has-rounded-corners">
+        <div class="card-image add-shadow is-relative has-rounded-corners">
+          <figure class="image has-rounded-corners">
+            <div class="movie-gradient is-unselectable"></div>
+            <img class="image is-unselectable" src="{{movie.movieImage}}" alt="{{movie.name}}">
+          </figure>
         </div>
-      </div>
+        <figcaption class="card__caption">
+          <h2 class="card__title has-text-weight-bold is-size-4">{{movie.name}}</h2>
+          <p class="card__snippet">{{movie.movieDescription}}</p>
+          <a href="" class="card__button">Read more</a>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </div>
