@@ -1,3 +1,4 @@
+@import url(../../bootstrap/bootstrap.min.css);
 @import url("https://fonts.googleapis.com/css?family=Montserrat:600&display=swap");
 ngb-carousel {
   max-width: 900px;

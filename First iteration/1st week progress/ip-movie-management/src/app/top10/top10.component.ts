@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {MovieModel} from "../../models/movie-model";
+import "../../bootstrap/bootstrap.css"
+import "../../bootstrap/bootstrap.min.css"
 
 @Component({
   selector: 'app-top10',
   templateUrl: './top10.component.html',
-  styleUrls: ['./top10.component.scss']
+  styleUrls: ['./top10.component.scss', '../../bootstrap/bootstrap.min.css']
 })
 export class Top10Component implements OnInit {
   ngOnInit(): void {}

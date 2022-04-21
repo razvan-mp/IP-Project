@@ -67,39 +67,6 @@ img {
   border-radius: 20px;
 }
 
-a.navbar-item:hover {
-  color: darkorange;
-  background-color: white;
-  transition: all 300ms;
-}
-
-a.navbar-item::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.1em;
-  background-color: darkorange;
-  opacity: 0;
-  transition: opacity 300ms, transform 300ms;
-}
-
-a.navbar-item::after {
-  opacity: 1;
-  transform: scale(0);
-  transform-origin: center;
-}
-
-a.navbar-item:hover::after,
-a.navbar-item:focus::after {
-  transform: scale(1);
-}
-
-.navbar-menu {
-  height: 60px;
-}
-
 a:hover {
   color: darkorange;
 }
