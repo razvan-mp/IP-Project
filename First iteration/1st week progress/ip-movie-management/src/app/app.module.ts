@@ -11,6 +11,9 @@ import {NavigationComponent} from "./navigation/navigation.component";
 import {RouterModule} from "@angular/router";
 import { HistoryComponent } from './history/history.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RemoveMovieComponent } from './remove-movie/remove-movie.component';
+import { WhiteUserComponent } from './white-user/white-user.component';
+import { RemoveUserComponent } from './remove-user/remove-user.component';
 
 //import {NgImageSliderModule} from "ng-image-slider";
 
@@ -22,7 +25,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     Top10Component,
     NavigationComponent,
     HistoryComponent,
-    DashboardComponent
+    DashboardComponent,
+    RemoveMovieComponent,
+    WhiteUserComponent,
+    RemoveUserComponent
   ],
   imports: [
     // NgImageSliderModule,

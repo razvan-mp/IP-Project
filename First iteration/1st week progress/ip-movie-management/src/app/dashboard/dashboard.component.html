@@ -1,27 +1,23 @@
 <section>
-  <div class="tabs is-toggle is-fullwidth">
+  <div class="tabs is-toggle is-fullwidth has-text-weight-semibold is-size-5">
     <ul>
       <li class="is-active">
-        <a>
-          <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+        <a routerLink="/dashboard">
           <span>Add movie</span>
         </a>
       </li>
       <li>
-        <a>
-          <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
+        <a routerLink="/remove-movie">
           <span>Remove movie</span>
         </a>
       </li>
       <li>
-        <a>
-          <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
+        <a routerLink="/white-user">
           <span>Whitelist user</span>
         </a>
       </li>
       <li>
-        <a>
-          <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
+        <a routerLink="/remove-user">
           <span>Remove user</span>
         </a>
       </li>
@@ -30,25 +26,79 @@
 </section>
 
 <section class="card mt-5">
-  <div class="container p-3">
+  <div class="container p-6">
+
+    <div class="field">
+      <h2 class="is-size-4 has-text-weight-bold is-underlined">Enter information: </h2>
+    </div>
+
     <div class="field is-horizontal">
-      <div class="field-label is-normal">
-        <label class="label">Movie name</label>
-      </div>
-      <div class="field-body">
+      <div class="field-body pt-3 pb-5">
         <div class="field">
-          <p class="control">
-            <input class="input" type="text" placeholder="">
+          <p class="control is-expanded">
+            <input class="input" type="text" placeholder="Movie name">
+          </p>
+        </div>
+        <div class="field">
+          <p class="control is-expanded">
+            <input class="input" type="link" placeholder="Poster image link">
           </p>
         </div>
       </div>
     </div>
 
+    <div class="dropdown-divider mt-2 mb-3"></div>
+
     <div class="field is-horizontal">
-      <div class="field-label is-normal">
-        <label class="label">Genre</label>
+      <div class="field-body pt-3 pb-3">
+        <div class="field">
+          <label class="label">Already released?</label>
+          <div class="control">
+            <label class="radio pr-4">
+              <input type="radio" name="member">
+              Yes
+            </label>
+            <label class="radio pl-4">
+              <input type="radio" name="member">
+              No
+            </label>
+          </div>
+        </div>
       </div>
-      <div class="field-body">
+      <div class="field-body pt-3 pb-3">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="Release year">
+          </div>
+        </div>
+      </div>
+
+      <div class="field-body pt-3 pb-3">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="Runtime">
+          </div>
+        </div>
+      </div>
+
+      <div class="field-body pt-3 pb-3">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="IMDb Rating">
+          </div>
+        </div>
+      </div>
+
+      <div class="field-body pt-3 pb-3">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="Meta Score">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="field-body pt-3 pb-3">
         <div class="field is-narrow">
           <div class="control">
             <div class="select">
@@ -82,67 +132,27 @@
       </div>
     </div>
 
-    <div class="field is-horizontal">
-      <div class="field-label">
-        <label class="label">Already a member?</label>
-      </div>
-      <div class="field-body">
-        <div class="field is-narrow">
-          <div class="control">
-            <label class="radio">
-              <input type="radio" name="member">
-              Yes
-            </label>
-            <label class="radio">
-              <input type="radio" name="member">
-              No
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="dropdown-divider mt-2 mb-4"></div>
 
     <div class="field is-horizontal">
-      <div class="field-label is-normal">
-        <label class="label">Subject</label>
-      </div>
-      <div class="field-body">
+      <div class="field-body is-expanded pt-3 pb-3">
         <div class="field">
           <div class="control">
-            <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity">
-          </div>
-          <p class="help is-danger">
-            This field is required
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="field is-horizontal">
-      <div class="field-label is-normal">
-        <label class="label">Question</label>
-      </div>
-      <div class="field-body">
-        <div class="field">
-          <div class="control">
-            <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+            <textarea class="textarea" placeholder="Movie description"></textarea>
           </div>
         </div>
       </div>
     </div>
 
     <div class="field is-horizontal">
-      <div class="field-label">
-        <!-- Left empty for spacing -->
-      </div>
-      <div class="field-body">
+      <div class="field-body pt-3 pb-3">
         <div class="field">
           <div class="control is-flex is-flex-direction-row">
             <button class="button is-primary mr-4">
-              Send message
+              Add movie
             </button>
             <button class="button is-family-secondary">
-              Reset
+              Reset fields
             </button>
           </div>
         </div>

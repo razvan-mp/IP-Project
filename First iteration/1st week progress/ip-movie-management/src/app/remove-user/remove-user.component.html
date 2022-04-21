@@ -1,0 +1,64 @@
+<section>
+  <div class="tabs is-toggle is-fullwidth has-text-weight-semibold is-size-5">
+    <ul>
+      <li>
+        <a routerLink="/dashboard">
+          <span>Add movie</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/remove-movie">
+          <span>Remove movie</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/white-user">
+          <span>Whitelist user</span>
+        </a>
+      </li>
+      <li class="is-active">
+        <a routerLink="/remove-user">
+          <span>Remove user</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="card mt-5">
+  <div class="container p-6">
+
+    <div class="field">
+      <h2 class="is-size-4 has-text-weight-bold is-underlined">Enter user information: </h2>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-body pt-3 pb-5">
+        <div class="field">
+          <p class="control is-expanded">
+            <input class="input" type="text" placeholder="Username">
+          </p>
+        </div>
+        <div class="field">
+          <p class="control is-expanded">
+            <input class="input" type="text" placeholder="Email">
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-body pt-3 pb-3">
+        <div class="field">
+          <div class="control is-flex is-flex-direction-row">
+            <button class="button is-primary mr-4">
+              Remove from whitelist
+            </button>
+            <button class="button is-family-secondary">
+              Reset fields
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
