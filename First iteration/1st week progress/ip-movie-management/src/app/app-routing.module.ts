@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'upcoming', component: UpcomingComponent},
   {path: 'top10', component: Top10Component},
-  {path: 'history', component: HistoryPageComponent},
+  {path: 'history-page', component: HistoryPageComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'white-user', component: WhiteUserComponent},
   {path: 'remove-movie', component: RemoveMovieComponent},

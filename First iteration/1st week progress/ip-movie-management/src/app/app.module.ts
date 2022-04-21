@@ -16,8 +16,6 @@ import { WhiteUserComponent } from './white-user/white-user.component';
 import { RemoveUserComponent } from './remove-user/remove-user.component';
 import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
 
-//import {NgImageSliderModule} from "ng-image-slider";
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +30,7 @@ import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
     RemoveUserComponent
   ],
   imports: [
-    // NgImageSliderModule,
+    NgImageSliderModule,
     BrowserModule,
     AppRoutingModule,
     NgImageSliderModule,
