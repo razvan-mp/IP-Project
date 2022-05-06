@@ -135,13 +135,13 @@
 
       <div class="is-flex is-flex-direction-row">
         <div *ngFor="let movie of (movieList ? movieList.splice(0, 4): [])">
-          <div class="card has-rounded-corners m-5">
+          <div class="card has-rounded-corners m-6">
             <div class="card-image add-shadow is-relative has-rounded-corners">
               <figure class="image">
                 <div class="is-overlay">
                   <div class="movie-gradient is-unselectable"></div>
                 </div>
-                <img class="is-unselectable" src="{{movie.movieImage}}" alt="{{movie.name}}">
+                <img class="is-unselectable" src="{{movie.image_url}}" alt="{{movie.name}}">
               </figure>
             </div>
           </div>

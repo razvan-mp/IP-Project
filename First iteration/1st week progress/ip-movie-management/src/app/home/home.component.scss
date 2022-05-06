@@ -20,11 +20,11 @@ $drop-shadow-color: rgba(218, 218, 218, 0.37);
 .movie-percentage {
   padding-left: 12px;
   background: white;
-  font-size: large;
+  font-size: 14px;
   color: green;
   width: 15%;
   height: 20%;
-  border-radius: 0 0 100px 0;
+  border-radius: 6px 0 100px 0;
   display: flex;
   align-items: center;
   box-shadow: 0 5px 8px 1px rgba(211, 211, 211, 0.3);
@@ -135,4 +135,39 @@ input {
 
 .ceva {
   margin-top: -20px;
+}
+
+.movie-added {
+  color: forestgreen;
+  transition: 300ms;
+}
+
+.content button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.content button:active span {
+  content: 'Remove movie from watchlist';
+}
+
+.content a:hover {
+  color: forestgreen;
+  transition: 300ms;
+}
+
+.crop {
+  width: 100%;
+  height: 232px;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+.percent-symbol {
+  font-size: small;
+}
+
+.dropdown-menu {
+  transition: 1000ms;
 }

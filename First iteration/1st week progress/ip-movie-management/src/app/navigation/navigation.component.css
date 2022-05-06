@@ -80,4 +80,9 @@ a:active {
   color: forestgreen;
 }
 
+.navbar-menu {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
 /*# sourceMappingURL=navigation.component.css.map */
