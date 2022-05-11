@@ -1,5 +1,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap" rel="stylesheet">
 
+<section class="section is-flex is-flex-direction-row is-justify-content-center p-0">
 <div class="container is-flex">
   <div *ngFor="let movie of upcomingMovieList">
     <div class="card has-rounded-corners m-4">
@@ -7,7 +8,7 @@
         <div class="card-image add-shadow is-relative has-rounded-corners">
           <figure class="image has-rounded-corners">
             <div class="movie-gradient is-unselectable"></div>
-            <img class="image is-unselectable" src="{{movie.movieImage}}" alt="{{movie.name}}">
+            <img class="image is-unselectable" src="{{movie.image_url}}" alt="{{movie.name}}">
           </figure>
         </div>
         <figcaption class="card__caption">
@@ -19,3 +20,4 @@
     </div>
   </div>
 </div>
+</section>

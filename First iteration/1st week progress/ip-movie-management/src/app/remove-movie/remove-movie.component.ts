@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import axios from "axios";
 
 @Component({
   selector: 'app-remove-movie',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RemoveMovieComponent implements OnInit {
 
+  removeMovieEndpoint = "http://127.0.0.1:8000/api/delete_movie/"
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  deleteMovie(event: SubmitEvent, movieForm: HTMLFormElement) {
+    event.preventDefault()
+    let formData = new FormData(movieForm)
+    // console.log(formData)
+    // console.dir(formData.getAll("name"))
+    let movieObject = Object.fromEntries(formData as any) as any
+    let body = {
+      data: {
+        name: movieObject["name"]
+      }
+    }
+    axios.delete(this.removeMovieEndpoint, body).then(
+      response => {
+        console.log(response.data.status)
+      }
+    )
+  }
 }

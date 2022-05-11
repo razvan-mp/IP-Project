@@ -181,4 +181,16 @@ body {
   margin-top: -18px;
 }
 
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
 /*# sourceMappingURL=upcoming.component.css.map */

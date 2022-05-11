@@ -7,57 +7,16 @@
           Liked movies
         </h2>
       </div>
-      <div class="card-content pt-0 pb-5">
-        <div class="panel p-3 is-flex is-flex-direction-row is-justify-content-space-between">
-          <h2 class="has-text-weight-semibold is-pulled-left pl-5 pt-2">Filmu 1</h2>
-          <div class="is-pulled-right pr-5">
-            <button class="button-custom">
-              <span>Remove</span>
-            </button>
-          </div>
-        </div>
-      </div>
 
-      <div class="card-content pt-0 pb-5">
-        <div class="panel p-3 is-flex is-flex-direction-row is-justify-content-space-between">
-          <h2 class="has-text-weight-semibold is-pulled-left pl-5 pt-2">Filmu 1</h2>
-          <div class="is-pulled-right pr-5">
-            <button class="button-custom">
-              <span>Remove</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-content pt-0 pb-5">
-        <div class="panel p-3 is-flex is-flex-direction-row is-justify-content-space-between">
-          <h2 class="has-text-weight-semibold is-pulled-left pl-5 pt-2">Filmu 1</h2>
-          <div class="is-pulled-right pr-5">
-            <button class="button-custom">
-              <span>Remove</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-content pt-0 pb-5">
-        <div class="panel p-3 is-flex is-flex-direction-row is-justify-content-space-between">
-          <h2 class="has-text-weight-semibold is-pulled-left pl-5 pt-2">Filmu 1</h2>
-          <div class="is-pulled-right pr-5">
-            <button class="button-custom">
-              <span>Remove</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-content pt-0 pb-5">
-        <div class="panel p-3 is-flex is-flex-direction-row is-justify-content-space-between">
-          <h2 class="has-text-weight-semibold is-pulled-left pl-5 pt-2">Filmu 1</h2>
-          <div class="is-pulled-right pr-5">
-            <button class="button-custom">
-              <span>Remove</span>
-            </button>
+      <div *ngFor="let movie of movieList">
+        <div class="card-content pt-0 pb-5">
+          <div class="panel p-3 is-flex is-flex-direction-row is-justify-content-space-between">
+            <h2 class="has-text-weight-semibold is-pulled-left pl-5 pt-2">{{movie.name}}</h2>
+            <div class="is-pulled-right pr-5">
+              <button class="button-custom">
+                <span>Remove</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -70,57 +29,15 @@
         </h2>
       </div>
 
-      <div class="card-content pt-0 pb-5">
-        <div class="panel p-3 is-flex is-flex-direction-row is-justify-content-space-between">
-          <h2 class="has-text-weight-semibold is-pulled-left pl-5 pt-2">Filmu 1</h2>
-          <div class="is-pulled-right pr-5">
-            <button class="button-custom">
-              <span>Remove</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-content pt-0 pb-5">
-        <div class="panel p-3 is-flex is-flex-direction-row is-justify-content-space-between">
-          <h2 class="has-text-weight-semibold is-pulled-left pl-5 pt-2">Filmu 1</h2>
-          <div class="is-pulled-right pr-5">
-            <button class="button-custom">
-              <span>Remove</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-content pt-0 pb-5">
-        <div class="panel p-3 is-flex is-flex-direction-row is-justify-content-space-between">
-          <h2 class="has-text-weight-semibold is-pulled-left pl-5 pt-2">Filmu 1</h2>
-          <div class="is-pulled-right pr-5">
-            <button class="button-custom">
-              <span>Remove</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-content pt-0 pb-5">
-        <div class="panel p-3 is-flex is-flex-direction-row is-justify-content-space-between">
-          <h2 class="has-text-weight-semibold is-pulled-left pl-5 pt-2">Filmu 1</h2>
-          <div class="is-pulled-right pr-5">
-            <button class="button-custom">
-              <span>Remove</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-content pt-0 pb-5">
-        <div class="panel p-3 is-flex is-flex-direction-row is-justify-content-space-between">
-          <h2 class="has-text-weight-semibold is-pulled-left pl-5 pt-2">Filmu 1</h2>
-          <div class="is-pulled-right pr-5">
-            <button class="button-custom">
-              <span>Remove</span>
-            </button>
+      <div *ngFor="let movie of movieList">
+        <div class="card-content pt-0 pb-5">
+          <div class="panel p-3 is-flex is-flex-direction-row is-justify-content-space-between">
+            <h2 class="has-text-weight-semibold is-pulled-left pl-5 pt-2">{{movie.name}}</h2>
+            <div class="is-pulled-right pr-5">
+              <button class="button-custom">
+                <span>Remove</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -134,14 +51,14 @@
       </div>
 
       <div class="is-flex is-flex-direction-row">
-        <div *ngFor="let movie of (movieList ? movieList.splice(0, 4): [])">
-          <div class="card has-rounded-corners m-5">
+        <div *ngFor="let movie of movieList">
+          <div class="card has-rounded-corners m-6">
             <div class="card-image add-shadow is-relative has-rounded-corners">
               <figure class="image">
                 <div class="is-overlay">
                   <div class="movie-gradient is-unselectable"></div>
                 </div>
-                <img class="is-unselectable" src="{{movie.movieImage}}" alt="{{movie.name}}">
+                <img class="is-unselectable" src="{{movie.image_url}}" alt="{{movie.name}}">
               </figure>
             </div>
           </div>
@@ -149,4 +66,5 @@
       </div>
     </div>
   </div>
+
 </section>

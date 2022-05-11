@@ -1,82 +1,28 @@
-<ngb-carousel>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img src="https://cdn.wallpapersafari.com/54/80/83tQ0A.jpg" alt="Angular Carousel 1">
-    </div>
-    <div class="carousel-caption">
-      <span><a href="https://www.plus2net.com/"></a></span>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img src="https://www.teahub.io/photos/full/67-670663_hollywood-movie-poster-hd.jpg" alt="Angular Carousel 2">
-    </div>
-    <div class="carousel-caption">
-      <span><a href="https://www.plus2net.com/"></a></span>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img src="https://cdn.wallpapersafari.com/87/86/ptiwFK.jpg" alt="Angular Carousel 1">
-    </div>
-    <div class="carousel-caption">
-      <span><a href="https://www.plus2net.com/"></a></span>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img src="https://c.wallhere.com/photos/91/f6/1600x1000_px_action_car_crime_Custom_Diesel_Fast_film-1521613.jpg!d" alt="Angular Carousel 1">
-    </div>
-    <div class="carousel-caption">
-      <span><a href="https://www.plus2net.com/"></a></span>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img src="https://www.teahub.io/photos/full/139-1394447_madagascar-3-movie-poster-madagascar-3-wallpaper-hd.jpg" alt="Angular Carousel 1">
-    </div>
-    <div class="carousel-caption">
-      <span><a href="https://www.plus2net.com/"></a></span>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img src="https://www.wallpaperuse.com/wallp/33-337976_m.jpg" alt="Angular Carousel 1">
-    </div>
-    <div class="carousel-caption">
-      <span><a href="https://www.plus2net.com/"></a></span>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img src="https://www.wallpaperflare.com/static/638/871/788/captain-america-the-winter-soldier-captain-america-nick-fury-black-widow-wallpaper.jpg" alt="Angular Carousel 1">
-    </div>
-    <div class="carousel-caption">
-      <span><a href="https://www.plus2net.com/"></a></span>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img src="https://wallpaperaccess.com/full/2138612.jpg" alt="Angular Carousel 1">
-    </div>
-    <div class="carousel-caption">
-      <span><a href="https://www.plus2net.com/"></a></span>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img src="https://adwallpapers.xyz/uploads/posts/254243-movies-movie-poster-Marvel-Comics-Guardians-of-the-Galaxy-Groot-Rocket-Raccoon-poster-mythology-screenshot-computer-wallpaper-pc-game-comic-book.jpg" alt="Angular Carousel 1">
-    </div>
-    <div class="carousel-caption">
-      <span><a href="https://www.plus2net.com/"></a></span>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img src="https://cdn.wallpapersafari.com/85/39/8kz7YN.jpg" alt="Angular Carousel 1">
-    </div>
-    <div class="carousel-caption">
-      <span><a href="https://www.plus2net.com/"></a></span>
-    </div>
-  </ng-template>
-</ngb-carousel>
+<div class="carousel-animation-wrapper">
+  <div class="carousel-wrapper">
+    <igx-carousel #carousel>
+      <igx-slide *ngFor="let slide of slides;">
+        <div class="slide-wrapper">
+          <igx-card>
+            <igx-card-header>
+              <h1 style="font-size:2em;" igxCardHeaderTitle>{{slide.heading}}</h1>
+            </igx-card-header>
+
+            <igx-card-content>
+              <p>{{slide.description}}</p>
+            </igx-card-content>
+
+            <igx-card-media>
+              <img [src]="slide.image">
+            </igx-card-media>
+
+            <igx-card-actions>
+              <a  igxButton href="{{slide.link}}" target="_blank" >Read More</a>
+            </igx-card-actions>
+          </igx-card>
+        </div>
+      </igx-slide>
+      <ng-template igxCarouselIndicator></ng-template>
+    </igx-carousel>
+  </div>
+</div>

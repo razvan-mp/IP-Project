@@ -82,3 +82,28 @@ a:active {
 .has-text-green {
   color: forestgreen;
 }
+
+.navbar-menu {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.resize-nav {
+  height: 32vh;
+}
+
+@media only screen and (min-width: 600px) {
+  .resize-nav {
+    height: unset;
+  }
+
+  nav {
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
