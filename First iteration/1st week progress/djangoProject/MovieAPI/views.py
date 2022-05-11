@@ -72,3 +72,15 @@ def delete_movie(request):
     except Exception as e:
         print(e)
         return HttpResponse(status=500)
+
+
+@api_view(['GET'])
+def get_history(request):
+    try:
+        movie_status = Movie.objects.filter().order_by('-id').all().values()[:5:-1]
+        return JsonResponse(movie_status, safe=False)
+    except Exception as e:
+        print(e)
+        return HttpResponse(status=500)
+
+
