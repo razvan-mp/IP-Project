@@ -55,11 +55,11 @@
           <label class="label">Already released?</label>
           <div class="control">
             <label class="radio pr-4">
-              <input type="radio" name="member">
+              <input type="radio" name="option_yes">
               Yes
             </label>
             <label class="radio pl-4">
-              <input type="radio" name="member">
+              <input type="radio" name="option_no">
               No
             </label>
           </div>
@@ -68,7 +68,7 @@
       <div class="field-body pt-3 pb-3">
         <div class="field">
           <div class="control">
-            <input class="input" type="text" placeholder="Release year">
+            <input name="release_date" class="input" type="text" placeholder="Release year">
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@
       <div class="field-body pt-3 pb-3">
         <div class="field">
           <div class="control">
-            <input class="input" type="text" placeholder="Runtime">
+            <input name="run_time" class="input" type="text" placeholder="Runtime">
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@
       <div class="field-body pt-3 pb-3">
         <div class="field">
           <div class="control">
-            <input class="input" type="text" placeholder="IMDb Rating">
+            <input name="imdb_rating" class="input" type="text" placeholder="IMDb Rating">
           </div>
         </div>
       </div>
@@ -92,7 +92,7 @@
       <div class="field-body pt-3 pb-3">
         <div class="field">
           <div class="control">
-            <input name="recommandation_percent" class="input" type="text" placeholder="Meta Score">
+            <input name="meta_score" class="input" type="text" placeholder="Meta Score">
           </div>
         </div>
       </div>
@@ -138,7 +138,7 @@
       <div class="field-body is-expanded pt-3 pb-3">
         <div class="field">
           <div class="control">
-            <textarea class="textarea" placeholder="Movie description"></textarea>
+            <textarea name="overview" class="textarea" placeholder="Movie description"></textarea>
           </div>
         </div>
       </div>

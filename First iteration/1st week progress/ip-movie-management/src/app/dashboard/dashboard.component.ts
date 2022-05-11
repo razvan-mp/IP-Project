@@ -18,8 +18,6 @@ export class DashboardComponent implements OnInit {
   submitMovieForm(event: Event, movieForm: HTMLFormElement) {
     event.preventDefault()
     let formData = new FormData(movieForm)
-    // console.log(formData)
-    // console.dir(formData.getAll("name"))
     let movieObject = Object.fromEntries(formData as any) as any
     axios.post(this.addMovieEndpoint, movieObject).then(
       response => {
