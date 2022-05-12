@@ -13,6 +13,17 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {RemoveMovieComponent} from './remove-movie/remove-movie.component';
 import {WhiteUserComponent} from './white-user/white-user.component';
 import {RemoveUserComponent} from './remove-user/remove-user.component';
+import {AccountComponent} from './account/account.component';
+import {ContainerProfileComponent} from './container-profile/container-profile.component';
+import {NavComponent} from './nav/nav.component';
+import {LoginComponent} from './login-page/login/login.component';
+import {AccountSecurityComponent} from './account/account-security/account-security.component';
+import {AccountSettingsComponent} from './account/account-settings/account-settings.component';
+import {LoginPageComponent} from './login-page/login-page.component';
+import {NavLoginComponent} from './nav-login/nav-login.component';
+import {AboutComponent} from './login-page/about/about.component';
+import {RegisterComponent} from './login-page/register/register.component';
+import {HttpClientModule} from '@angular/common/http';
 
 import 'hammerjs';
 import { FormsModule } from "@angular/forms";
@@ -25,8 +36,6 @@ import {
   IgxCardModule
 } from "igniteui-angular";
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,19 +47,28 @@ import {
     DashboardComponent,
     RemoveMovieComponent,
     WhiteUserComponent,
-    RemoveUserComponent
+    RemoveUserComponent,
+    AccountSettingsComponent,
+    AccountComponent,
+    ContainerProfileComponent,
+    NavComponent,
+    AccountSecurityComponent,
+    LoginComponent,
+    LoginPageComponent,
+    NavLoginComponent,
+    AboutComponent,
+    RegisterComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    IgxCarouselModule,
-    IgxIconModule,
-    IgxSelectModule,
-    IgxButtonModule,
-    IgxCardModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    IgxCarouselModule,
+    IgxCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

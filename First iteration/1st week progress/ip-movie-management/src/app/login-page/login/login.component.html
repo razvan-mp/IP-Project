@@ -1,0 +1,46 @@
+<section class="mt-3">
+  <app-nav-login></app-nav-login>
+  <div class="login-container2">
+    <div class="pictures">
+      <div class="left-pic">
+        <img id="movies-image" src="../../assets/images/movies.png" alt="asd">
+      </div>
+      <div class="right-pic">
+        <div class="login-container">
+          <h1>Login</h1>
+          <form (ngSubmit)="onSubmit()">
+            <input type="text" name="username" [(ngModel)]="username" placeholder="Username"/><br>
+            <input type="password" name="password" [(ngModel)]="password" id="Password" placeholder="Password"/><br>
+
+
+            <br>
+            <div style="display: flex; flex-direction: row;">
+              <div id="checkRemember"><input type="checkbox" name="rememberMe"></div>
+              <p class="remember-forgot">Remember me</p>
+              <a href="#" class="remember-forgot">Forgot password</a>
+            </div>
+
+            <br>
+            <div style="display: flex; flex-direction: row; justify-content: center;">
+              <p style="margin-right: 5px; margin-left: -30px; font-size: 17px;">Or login using:</p>
+              <a href="https://www.facebook.com/"><img class="login-icon" src="../assets/images/fb.png"
+                                                       alt="FB"></a>
+              <a href="https://www.twitter.com/"><img class="login-icon" src="../assets/images/tw.png"
+                                                      alt="TW"></a>
+              <a href="https://www.google.com/"><img class="login-icon" src="../assets/images/gl.png"
+                                                     alt="GL"></a>
+            </div>
+
+            <br>
+            <button type="submit">Login</button>
+          </form>
+          <br>
+          <a routerLink="/login-page/register" style="font-size: 17px;">Create a new account!</a>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
