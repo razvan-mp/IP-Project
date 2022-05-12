@@ -58,7 +58,7 @@ def populate(request):
 @api_view(['GET'])
 def get_movies(request):
     try:
-        movies = list(Movie.objects.filter(~Q(image_url='linklaposter')).all().values())
+        movies = list(Movie.objects.filter(~Q(image_url='linklaposter')).filter(Q(released=True)).all().values())
 
         return JsonResponse(movies, safe=False)
     except Exception as e:
@@ -108,6 +108,16 @@ def get_history(request):
 def get_upcoming(request):
     try:
         movies = list(Movie.objects.filter(~Q(released=True)).all().values())[:4]
+        return JsonResponse(movies, safe=False)
+    except Exception as e:
+        print(e)
+        return HttpResponse(status=500)
+
+
+@api_view(['GET'])
+def get_top10(request):
+    try:
+        movies = list(Movie.objects.filter(~Q(image_url='linklaposter')).order_by('-imdb_rating').all().values())[:10]
         return JsonResponse(movies, safe=False)
     except Exception as e:
         print(e)
