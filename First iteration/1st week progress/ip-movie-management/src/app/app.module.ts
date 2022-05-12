@@ -14,6 +14,19 @@ import {RemoveMovieComponent} from './remove-movie/remove-movie.component';
 import {WhiteUserComponent} from './white-user/white-user.component';
 import {RemoveUserComponent} from './remove-user/remove-user.component';
 
+import 'hammerjs';
+import { FormsModule } from "@angular/forms";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import {
+  IgxCarouselModule,
+  IgxIconModule,
+  IgxSelectModule,
+  IgxButtonModule,
+  IgxCardModule
+} from "igniteui-angular";
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +44,13 @@ import {RemoveUserComponent} from './remove-user/remove-user.component';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    IgxCarouselModule,
+    IgxIconModule,
+    IgxSelectModule,
+    IgxButtonModule,
+    IgxCardModule,
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
