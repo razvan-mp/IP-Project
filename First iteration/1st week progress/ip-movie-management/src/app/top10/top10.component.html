@@ -1,28 +1,30 @@
-<div class="carousel-animation-wrapper mt-0 pt-0 bt-0">
-  <div class="carousel-wrapper mt-0 pt-0 bt-0">
-    <igx-carousel #carousel>
-      <igx-slide *ngFor="let slide of slides;">
-        <div class="slide-wrapper">
-          <igx-card>
-            <igx-card-header>
-              <h1 style="font-size:2em;" igxCardHeaderTitle>{{slide.heading}}</h1>
-            </igx-card-header>
+<div class="carousel-animation-wrapper m-0 p-0 b-0">
+  <igx-carousel #carousel>
+    <igx-slide *ngFor="let slide of slides;">
+      <div class="slide-wrapper">
+        <igx-card>
+          <igx-card-header>
+            <h1 class="is-size-3 has-text-weight-bold" igxCardHeaderTitle>{{slide.name}}</h1>
+          </igx-card-header>
 
-            <igx-card-content>
-              <p>{{slide.description}}</p>
-            </igx-card-content>
+          <igx-card-content>
+            <p class="has-text-weight-regular">{{slide.overview}}</p>
+          </igx-card-content>
 
-            <igx-card-media>
-              <img [src]="slide.image">
-            </igx-card-media>
+          <igx-card-media class="is-flex is-justify-content-space-around p-6">
+            <div class="card">
+              <img [src]="slide.image_url" class="crop">
+            </div>
+          </igx-card-media>
 
-            <igx-card-actions>
-              <a  igxButton href="{{slide.link}}" target="_blank" >Read More</a>
-            </igx-card-actions>
-          </igx-card>
-        </div>
-      </igx-slide>
-      <ng-template igxCarouselIndicator></ng-template>
-    </igx-carousel>
-  </div>
+          <igx-card-actions class="is-flex is-justify-content-space-around p-6">
+            <button class="button is-medium">
+              <a href="{{slide.movieLink}}">Read More</a>
+            </button>
+          </igx-card-actions>
+        </igx-card>
+      </div>
+    </igx-slide>
+    <ng-template igxCarouselIndicator></ng-template>
+  </igx-carousel>
 </div>
