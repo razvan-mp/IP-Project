@@ -1,0 +1,56 @@
+.tabs.is-toggle li.is-active a {
+  background-color: darkorange;
+  border-color: darkgoldenrod;
+  color: #fff;
+  z-index: 1;
+}
+
+.field.is-horizontal {
+  align-items: center;
+  gap: 15px;
+  justify-items: center;
+}
+
+.is-primary {
+  background-color: white;
+  border-color: rgba(255, 140, 0, 0.5);
+  color: black;
+}
+
+.is-primary:hover {
+  background-color: darkorange;
+  transition: 200ms;
+}
+
+.is-family-secondary:hover {
+  background-color: whitesmoke;
+  outline: none;
+  border: 2px solid whitesmoke;
+  transition: all 200ms;
+}
+
+textarea:focus {
+  border: 1px solid darkorange;
+  outline: none;
+  box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.05);
+}
+
+textarea {
+  border-radius: 15px;
+}
+
+.select select {
+  border-radius: 15px;
+}
+
+input:focus {
+  border: 1px solid darkorange;
+  outline: none;
+  box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.05);
+}
+
+input {
+  border-radius: 15px;
+}
+
+/*# sourceMappingURL=dashboard.component.css.map */

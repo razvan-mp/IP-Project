@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+$drop-shadow-color: rgba(218, 218, 218, 0.37);
+
+.image {
+  height: 75%;
+  width: 100%;
+}
+
+.is-flex {
+  gap: 20px;
+}
+
+.add-shadow {
+  box-shadow: 0 5px 8px 1px $drop-shadow-color;
+}
+
+img {
+  border-radius: 20px;
+}
+
+.hi-user {
+  color: darkorange;
+}
+
+a.navbar-item:hover {
+  color: darkorange;
+  background-color: white;
+  transition: all 300ms;
+}
+
+a.navbar-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: darkorange;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+a.navbar-item::after {
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+a.navbar-item:hover::after,
+a.navbar-item:focus::after {
+  transform: scale(1);
+}
+
+.navbar-menu {
+  height: 60px;
+}
+
+a:hover {
+  color: darkorange;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: all 200ms;
+}
+
+.button-custom {
+  background: darkorange;
+}
+
+.button-custom:hover {
+  background: black;
+  color: white;
+}
+
+a:active {
+  color: darkorange;
+}
+
+.has-text-green {
+  color: forestgreen;
+}

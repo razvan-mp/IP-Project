@@ -1,0 +1,35 @@
+.container-profile{
+    margin-top: -60px;
+}
+
+#profilTitlu{
+    color:  #C5BBBB;
+}
+
+#title-and-nav{
+    padding-top: 1px;
+    box-shadow: 0 5px 8px 2px rgba(218, 218, 218, 0.57);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+}
+
+section{
+    width: 100%;
+    margin-top: 1em;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container-profile #profilTitlu{
+    margin: .75em auto 0em auto;
+}
+
+@media only screen and (max-width:1000px){
+    #title-and-nav{
+        border-radius: 0 0;
+    }
+}
