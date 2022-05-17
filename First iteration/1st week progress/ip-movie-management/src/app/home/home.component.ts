@@ -7,6 +7,7 @@ import axios, {AxiosRequestConfig} from "axios";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent{
   config: AxiosRequestConfig
 

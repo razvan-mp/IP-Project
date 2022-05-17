@@ -34,7 +34,7 @@ def populate(request):
                 language = row[9]
                 image_url = row[11]
 
-                if image_url == 'linklaposter':
+                if not image_url.startswith('https://m.media-amazon.com/'):
                     pass
                 else:
                     image_url_split = image_url.split('_')
@@ -47,8 +47,8 @@ def populate(request):
                                   run_time, production_company, language, image_url, overview, True)
                     movie.save(True)
                     print(line_count)
-                except:
-                    pass
+                except Exception as e:
+                    print(e)
         return HttpResponse(status=200)
     except Exception as e:
         print(e)
