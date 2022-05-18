@@ -36,7 +36,7 @@
       <div class="field-body">
         <div class="field">
           <p class="control is-expanded">
-            <input name="name" class="input" type="text" placeholder="Movie name">
+            <input name="name" class="input" type="text" placeholder="Movie name" required>
           </p>
         </div>
       </div>
@@ -49,7 +49,7 @@
             <button type="submit" class="button is-primary mr-4">
               Remove movie
             </button>
-            <button class="button is-family-secondary">
+            <button class="button is-family-secondary" onclick="this.form.reset()">
               Reset fields
             </button>
           </div>

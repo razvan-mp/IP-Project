@@ -36,12 +36,12 @@
       <div class="field-body pt-3 pb-5">
         <div class="field">
           <p class="control is-expanded">
-            <input name="name" class="input" type="text" placeholder="Movie name">
+            <input class="input" name="name" placeholder="Movie name" type="text" required>
           </p>
         </div>
         <div class="field">
           <p class="control is-expanded">
-            <input name="image_url" class="input" type="link" placeholder="Poster image link">
+            <input class="input" name="image_url" placeholder="Poster image link" type="link" required>
           </p>
         </div>
       </div>
@@ -55,11 +55,11 @@
           <label class="label">Already released?</label>
           <div class="control">
             <label class="radio pr-4">
-              <input type="radio" name="option_yes">
+              <input name="option_yes" type="radio">
               Yes
             </label>
             <label class="radio pl-4">
-              <input type="radio" name="option_no">
+              <input name="option_no" type="radio">
               No
             </label>
           </div>
@@ -68,7 +68,7 @@
       <div class="field-body pt-3 pb-3">
         <div class="field">
           <div class="control">
-            <input name="release_date" class="input" type="text" placeholder="Release year">
+            <input class="input" name="release_date" placeholder="Release year" type="text" required>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@
       <div class="field-body pt-3 pb-3">
         <div class="field">
           <div class="control">
-            <input name="run_time" class="input" type="text" placeholder="Runtime">
+            <input class="input" name="run_time" placeholder="Runtime" type="text" required>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@
       <div class="field-body pt-3 pb-3">
         <div class="field">
           <div class="control">
-            <input name="imdb_rating" class="input" type="text" placeholder="IMDb Rating">
+            <input class="input" name="imdb_rating" placeholder="IMDb Rating" type="text" required>
           </div>
         </div>
       </div>
@@ -92,7 +92,7 @@
       <div class="field-body pt-3 pb-3">
         <div class="field">
           <div class="control">
-            <input name="meta_score" class="input" type="text" placeholder="Meta Score">
+            <input class="input" name="meta_score" placeholder="Meta Score" type="text" required>
           </div>
         </div>
       </div>
@@ -138,7 +138,7 @@
       <div class="field-body is-expanded pt-3 pb-3">
         <div class="field">
           <div class="control">
-            <textarea name="overview" class="textarea" placeholder="Movie description"></textarea>
+            <textarea class="textarea" name="overview" placeholder="Movie description"></textarea>
           </div>
         </div>
       </div>
@@ -148,10 +148,10 @@
       <div class="field-body pt-3 pb-3">
         <div class="field">
           <div class="control is-flex is-flex-direction-row">
-            <button type="submit" class="button is-primary mr-4">
+            <button class="button is-primary mr-4" type="submit">
               Add movie
             </button>
-            <button class="button is-family-secondary">
+            <button class="button is-family-secondary" onclick="this.form.reset();">
               Reset fields
             </button>
           </div>

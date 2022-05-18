@@ -52,3 +52,8 @@ input:focus {
 input {
   border-radius: 15px;
 }
+
+.button.is-primary:focus {
+  background: white !important;
+  color: black !important;
+}

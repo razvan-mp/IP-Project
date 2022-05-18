@@ -2,6 +2,19 @@
 
 $drop-shadow-color: rgba(218, 218, 218, 0.37);
 
+#page-section {
+  --text-color: #222;
+  --bkg-color: #2d2d2d;
+  --btn-bg-color: darkorange;
+  --btn-text-color: white;
+}
+#page-section.dark-mode {
+  --text-color: #222;
+  --bkg-color: #2d2d2d;
+  --btn-bg-color: darkorange;
+  --btn-text-color: white;
+}
+
 .image {
   height: 75%;
   width: 100%;
@@ -27,7 +40,7 @@ $drop-shadow-color: rgba(218, 218, 218, 0.37);
   border-radius: 6px 0 100px 0;
   display: flex;
   align-items: center;
-  box-shadow: 0 5px 8px 1px rgba(211, 211, 211, 0.3);
+  box-shadow: 0 5px 8px 1px $drop-shadow-color;
 }
 
 .add-shadow {
@@ -59,7 +72,7 @@ img {
 .movie-gradient {
   width: 100%;
   height: 75%;
-  margin-top: 14.1%;
+  //margin-top: 14.1%;
   position: absolute;
   opacity: 0.2;
   background: rgb(0, 0, 0);
@@ -161,7 +174,7 @@ input {
   width: 100%;
   height: 232px;
   object-fit: cover;
-  object-position: 0 0;
+  object-position: 0 25%;
 }
 
 .percent-symbol {

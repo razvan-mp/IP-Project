@@ -118,6 +118,7 @@ def get_upcoming(request):
 def get_top10(request):
     try:
         movies = list(Movie.objects.filter(~Q(image_url='linklaposter')).order_by('-imdb_rating').all().values())[:10]
+        print(len(movies))
         return JsonResponse(movies, safe=False)
     except Exception as e:
         print(e)
