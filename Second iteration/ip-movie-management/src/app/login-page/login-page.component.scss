@@ -1,0 +1,255 @@
+.login-container2{
+    box-shadow: 0 5px 8px 2px rgba(218, 218, 218, 0.57);
+    padding-top: 1em;
+}
+.pictures {
+    display: flex;
+    height: 100%;
+    grid-template-columns: 800px auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-pic {
+    width: 600px;
+    height: 600px;
+    margin-right: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-pic #movies-image{
+    height: 90%;
+    width: auto;
+}
+
+.right-pic {
+    width: 600px;
+    height: 600px;
+    background-image: url("../../assets/images/background-login.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.login-container{
+    width: 350px;
+    height: 470px;
+    padding: 20px 25px 20px 25px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+    box-shadow: 0 5px 8px 2px rgba(218, 218, 218, 0.57);
+}
+
+.login-container2 .pictures .right-pic .login-container h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0.5em;
+}
+.login-container input {
+    border-radius: 5px;
+    padding: 1em;
+    margin: 4px;
+    border: none;
+    width: 80%;
+    outline: none;
+    font-weight: bold;
+    color: #000000;
+    transition: color .2s ease-in-out, box-shadow .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.login-container input:focus{
+    color: #707070;
+    font-weight: bold;
+}
+
+.login-container input:hover{
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-weight: bold;
+    background-color :rgb(251, 214, 169) ;
+}
+
+.login-container button {
+    border-radius: 5px;
+    margin: 4px;
+    border: none;
+    width: 80%;
+    outline: none;
+    transition: color .2s ease-in-out, box-shadow .2s ease-in-out, background-color .2s ease-in-out;
+    padding: 10px;
+    font-size: 22px;
+    width: 60%;
+    cursor: pointer;
+    font-weight: bold;
+    color: #707070;
+}
+.login-container button:hover{
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-weight: bold;
+    background-color :darkorange ;
+}
+
+
+input::placeholder{
+    color: #c5bdbd;
+}
+
+input:hover::placeholder {
+    color: white;
+}
+// #text-icon-login{
+//     margin-right: 5px;
+//     margin-left: -30px; 
+//     font-size: 17px;
+// }
+.login-container .stay-log{
+    display: flex; flex-direction: row;
+}
+#checkRemember {
+    width: 30px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+.remember-forgot{
+    font-size: 12px; 
+    margin-top: 4px;
+    margin-right: -25px;
+}
+
+.remember-forgot:last-child{
+    margin-left:55px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.login-option{
+    display: flex; 
+    flex-direction: row;
+  justify-content: center;
+}
+.login-container .login-option p{
+    margin-right: 5px;
+     margin-left: -30px;
+      font-size: 17px;
+}
+
+.login-icon {
+    height: 35px;
+    width: auto;
+    margin: 6px;
+    margin-top: -4px;
+}
+
+.login-container .warning{
+    position: relative;
+    right: auto;
+    width: auto;
+    height: 0;
+    color: rgb(240, 109, 109);
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 1440px){
+    .pictures .left-pic {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 1350px){
+    .pictures .left-pic {
+        display: none;
+    }
+
+    .pictures .right-pic{
+        margin-top: 5px;
+    }
+
+    .login-container .warning{
+        height: auto;
+        width: 300px;
+        position: absolute;
+        left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .pictures .right-pic{
+        height: 500px;
+        width: 500px;
+    }
+
+    .pictures .right-pic .login-container{
+        width: 280px;
+        height: 390px;
+    }
+
+    .login-container input,button {
+        padding: 0.75em;
+        margin: 3px;
+    }
+
+
+    .login-container{
+        width: 350px;
+        padding: 10px 10px 10px 10px;
+    }
+
+
+
+    h1 {
+        font-size: 35px;
+        margin-bottom: 2vh;
+    }
+
+    .remember-forgot{
+        font-size: 10px; 
+        margin-top: 0px;
+    }
+
+    .remember-forgot:last-child{
+        margin-left:30px;
+    }
+
+    #text-icon-login{
+        font-size: 12px;
+    }
+
+    .login-icon {
+        height: 25px;
+        width: auto;
+    }
+
+}
+
+@media only screen and (max-width:500px){
+    .pictures .right-pic{
+        background-image: none;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .pictures .right-pic .login-container{
+        width: 200px;
+    }
+}

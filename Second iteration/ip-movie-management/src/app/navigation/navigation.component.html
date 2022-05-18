@@ -1,0 +1,61 @@
+<nav class="navbar has-text-weight-semibold is-size-6" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu add-shadow is-unselectable">
+    <div class="navbar-start ml-5">
+      <a class="navbar-item" routerLink="/home">
+        Home
+      </a>
+      <a class="navbar-item" routerLink="/history">
+        History
+      </a>
+      <a class="navbar-item" routerLink="/top10">
+        Top 10
+      </a>
+      <a class="navbar-item" routerLink="/upcoming">
+        Upcoming
+      </a>
+    </div>
+    <div class="navbar-end ml-5">
+      <div class="navbar-item mr-5 has-text-orange dropdown is-hoverable">
+        <a class="hi-user has-text-weight-bold">Hi, user
+        </a>
+        <div class="dropdown-trigger">
+          <img class="is-dropdown pl-5" src="assets/images/mock-user.png" alt="Click for settings">
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+          <div class="dropdown-content mr-6">
+            <div class="dropdown-item">
+
+              <a routerLink="account/account-settings">
+                <div class="panel is-shadowless p-2">
+                  Settings
+                </div>
+              </a>
+
+              <a routerLink="/dashboard">
+                <div class="panel is-shadowless p-2">
+                  Dashboard
+                </div>
+              </a>
+
+              <div class="dropdown-divider"> </div>
+
+              <a routerLink="/login-page/login">
+                <div class="has-text-green panel is-shadowless p-2">
+                  Log in
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

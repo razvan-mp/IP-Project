@@ -1,0 +1,21 @@
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+<div class="container is-flex">
+  <div *ngFor="let movie of upcomingMovieList">
+    <div class="card has-rounded-corners m-4">
+      <figure class="card__thumb has-rounded-corners">
+        <div class="card-image add-shadow is-relative has-rounded-corners">
+          <figure class="image has-rounded-corners">
+            <div class="movie-gradient is-unselectable"></div>
+            <img class="image is-unselectable" src="{{movie.movieImage}}" alt="{{movie.name}}">
+          </figure>
+        </div>
+        <figcaption class="card__caption">
+          <h2 class="card__title has-text-weight-bold is-size-4">{{movie.name}}</h2>
+          <p class="card__snippet">{{movie.movieDescription}}</p>
+          <a href="" class="card__button">Read more</a>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
