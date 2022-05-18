@@ -34,4 +34,6 @@ export class HomeComponent{
   random() {
     return Math.floor(Math.random() * 10)
   }
+
+
 }

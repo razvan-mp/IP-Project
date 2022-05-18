@@ -31,8 +31,8 @@ export class MovieModel {
   }
 
   added(movie: MovieModel) {
-    movie.movieAdded = !movie.movieAdded;
-    return movie.movieAdded;
+    movie.movieAdded = true;
+
   }
 
   readMore() {
