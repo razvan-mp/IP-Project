@@ -15,13 +15,14 @@ import { AboutComponent } from './login-page/about/about.component';
 import { AccountSettingsComponent } from './account/account-settings/account-settings.component';
 import { AccountSecurityComponent } from './account/account-security/account-security.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
   {path: 'home', component: HomeComponent},
   {path: 'upcoming', component: UpcomingComponent},
   {path: 'top10', component: Top10Component},
-  {path: 'history', component: HistoryPageComponent},
+  {path: 'history', component: HistoryPageComponent, canActivate: [AuthGuard]},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'white-user', component: WhiteUserComponent},
   {path: 'remove-movie', component: RemoveMovieComponent},

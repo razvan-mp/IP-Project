@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import axios, {AxiosRequestConfig} from "axios";
 
 
@@ -18,16 +19,17 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  constructor(private router: Router) { }
+
   onSubmit(){
     
-    const newLoginComponent = {
+    const user = {
       username: this.username,
       password: this.password
     }
 
     this.errorMessage="";
     this.sendData();    
-  
   }
 
   private sendData() {
@@ -39,9 +41,11 @@ export class LoginComponent implements OnInit {
       }
     })
     .then( (response) => {
-      this.accessToken = response.data.access_token;
-      this.refreshToken = response.data.refresh_token;
+      localStorage.setItem("accessToken", response.data.access_token);
+      // this.accessToken = response.data.access_token;
+      // this.refreshToken = response.data.refresh_token;
       this.errorMessage = "";
+      this.router.navigate(['/home']);
     })
     .catch( (error) => {
       this.errorMessage=error;

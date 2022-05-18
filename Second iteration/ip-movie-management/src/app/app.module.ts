@@ -27,6 +27,7 @@ import { RegisterComponent } from './login-page/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule//,
     //NgbCarouselModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {
