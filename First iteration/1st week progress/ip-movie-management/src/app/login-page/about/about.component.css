@@ -1,66 +1,3 @@
-.nav-container {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 100% auto;
-  padding-left: 10px;
-  padding-top: 10px;
-}
-
-.nav-container a {
-  background-color: transparent;
-  color: #707070;
-  font-size: 20px;
-  transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
-  font-weight: bold;
-  padding-top: 0;
-}
-
-header nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-header nav ul li {
-  float: left;
-}
-
-header nav ul li a {
-  padding: 7px 10px 10px 5px;
-  font-size: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-header nav ul li a:hover {
-  background-color: darkorange;
-  color: white;
-  box-shadow: 0 5px 8px 1px rgba(218, 218, 218, 0.37);
-  border-radius: 2px;
-}
-
-@media only screen and (max-width: 460px) {
-  .nav-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .nav-container a {
-    font-size: 10px;
-  }
-
-  header nav ul li a {
-    font-size: 15px;
-  }
-}
-@media only screen and (max-width: 350px) {
-  header nav ul li a {
-    margin-left: 2px;
-    margin-right: 2px;
-  }
-}
 .container {
   /* background: linear-gradient(217deg, rgba(197, 187, 187, 1), rgba(255,0,0,0) 100%),
           linear-gradient(127deg, rgba(197, 187, 187, 1), rgba(0,255,0,0) 100%),
@@ -92,13 +29,27 @@ header nav ul li a:hover {
   margin-left: 5%;
 }
 
-.container h1 {
-  font-size: 70px;
-  color: darkorange;
-  font: bold;
-  border: 3px;
-  margin-left: 10%;
-  margin-top: 10%;
+@media only screen and (max-width: 460px) {
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-container a {
+    font-size: 10px;
+  }
+
+  header nav ul li a {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  header nav ul li a {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
 }
 
 /*# sourceMappingURL=about.component.css.map */

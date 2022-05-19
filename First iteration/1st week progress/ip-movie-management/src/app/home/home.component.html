@@ -99,6 +99,10 @@
                   <div class="dropdown-divider is-bold"></div>
 
                   <p class="is-size-6">
+                    <b>Released: </b> {{movie.release_date}}
+                  </p>
+
+                  <p class="is-size-6">
                     <b>Run time: </b> {{movie.run_time}} minutes
                   </p>
 
@@ -107,7 +111,7 @@
                   </p>
 
                   <p class="is-size-6">
-                    <b>Production company: </b> {{this.getProductionCompanies(movie)}}
+                    <b>Production company: </b> <i>{{this.getProductionCompanies(movie)}}</i>
                   </p>
 
                 </div>

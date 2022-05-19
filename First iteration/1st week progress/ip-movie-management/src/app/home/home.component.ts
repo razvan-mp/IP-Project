@@ -75,7 +75,14 @@ export class HomeComponent {
 
   getProductionCompanies(movie: MovieModel) {
     let productionCompanyMiddle = JSON.parse(<string>movie.production_company)
-    let productionCompany = []
-    console.log(productionCompanyMiddle)
+    let productionCompany = ''
+    for (let index = 0; index < productionCompanyMiddle.length - 1; index++) {
+      productionCompany += productionCompanyMiddle[index]['name']
+      productionCompany += ', '
+    }
+
+    productionCompany += productionCompanyMiddle[productionCompanyMiddle.length - 1]['name']
+
+    return productionCompany
   }
 }
