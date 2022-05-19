@@ -35,6 +35,8 @@ import {
   IgxButtonModule,
   IgxCardModule
 } from "igniteui-angular";
+import { AuthGuard } from './guards/auth.guard';
+import { AuthService } from './authentification/auth.service';
 
 @NgModule({
   declarations: [
@@ -70,7 +72,7 @@ import {
     IgxCarouselModule,
     IgxCardModule
   ],
-  providers: [],
+  providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

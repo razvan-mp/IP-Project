@@ -1,3 +1,6 @@
+import { Router } from "@angular/router";
+import { AuthService } from "src/app/authentification/auth.service";
+
 export class MovieModel {
   id: number;
   name: string | undefined;
@@ -13,6 +16,9 @@ export class MovieModel {
   movieAdded: boolean | undefined;
   movieReadMore: boolean | undefined;
 
+  static _auth: AuthService;
+  static router: Router;
+  
   constructor(movie_id: number, name: string | undefined, release_date: string | undefined, director: string | undefined, imdb_rating: number, run_time: number | undefined, production_company: string | undefined, language: string | undefined, image_url: string | undefined, overview: string | undefined) {
     this.id = movie_id;
     this.name = name;
@@ -30,13 +36,26 @@ export class MovieModel {
   }
 
   added(movie: MovieModel) {
-    movie.movieAdded = true;
-    console.log(movie)
+    if(MovieModel._auth.token) {
+      movie.movieAdded = true;
+    }
+    else {
+      MovieModel.router.navigate(['/login-page/login']);
+    }
   }
 
   readMore() {
     this.movieReadMore = !this.movieReadMore;
     window.open(this.movieLink, "_blank");
     return this.movieReadMore;
+  }
+
+  
+  public static setAuth(auth: AuthService){
+    MovieModel._auth = auth;
+  }
+
+  public static setRouter(router: Router){
+    MovieModel.router = router;
   }
 }

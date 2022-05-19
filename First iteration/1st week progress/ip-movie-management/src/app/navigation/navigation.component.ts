@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../authentification/auth.service';
 
 @Component({
   selector: 'app-navigation',
@@ -9,7 +10,7 @@ export class NavigationComponent implements OnInit {
 
   burgerClicked: boolean = false
 
-  constructor() { }
+  constructor(public _auth: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -28,5 +29,10 @@ export class NavigationComponent implements OnInit {
       e.target.classList.remove('is-active')
       console.log('removed is-active class')
     }
+  }
+  
+  logout() {
+    this._auth.logout();
+    // window.location.reload();
   }
 }

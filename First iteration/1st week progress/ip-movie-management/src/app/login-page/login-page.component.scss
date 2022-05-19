@@ -2,22 +2,14 @@
     box-shadow: 0 5px 8px 2px rgba(218, 218, 218, 0.57);
     padding-top: 1em;
 }
-
-#text-icon-login{
-    margin-right: 5px;
-    margin-left: -30px;
-    font-size: 17px;
+.pictures {
+    display: flex;
+    height: 100%;
+    grid-template-columns: 800px auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-
-.remember-forgot{
-    font-size: 15px;
-    margin-top: 4px;
-}
-
-.remember-forgot:last-child{
-    margin-left:55px;
-}
-
 
 .left-pic {
     width: 600px;
@@ -28,7 +20,7 @@
     align-items: center;
 }
 
-#movies-image{
+.left-pic #movies-image{
     height: 90%;
     width: auto;
 }
@@ -46,20 +38,6 @@
 
 }
 
-.pictures {
-    display: flex;
-    height: 100%;
-    grid-template-columns: 800px auto;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
 .login-container{
     width: 350px;
     height: 470px;
@@ -73,7 +51,13 @@ a {
     box-shadow: 0 5px 8px 2px rgba(218, 218, 218, 0.57);
 }
 
-.login-container input,button {
+.login-container2 .pictures .right-pic .login-container h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0.5em;
+}
+.login-container input {
     border-radius: 5px;
     padding: 1em;
     margin: 4px;
@@ -90,16 +74,6 @@ a {
     font-weight: bold;
 }
 
-.login-container button {
-    padding: 10px;
-    font-size: 22px;
-    width: 60%;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #707070;
-}
-
 .login-container input:hover{
     color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -107,6 +81,20 @@ a {
     background-color :rgb(251, 214, 169) ;
 }
 
+.login-container button {
+    border-radius: 5px;
+    margin: 4px;
+    border: none;
+    width: 80%;
+    outline: none;
+    transition: color .2s ease-in-out, box-shadow .2s ease-in-out, background-color .2s ease-in-out;
+    padding: 10px;
+    font-size: 22px;
+    width: 60%;
+    cursor: pointer;
+    font-weight: bold;
+    color: #707070;
+}
 .login-container button:hover{
     color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -114,9 +102,6 @@ a {
     background-color :darkorange ;
 }
 
-.container {
-    border-radius: 50px;
-}
 
 input::placeholder{
     color: #c5bdbd;
@@ -126,35 +111,21 @@ input:hover::placeholder {
     color: white;
 }
 
-h1 {
-    font-size: 45px;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-    margin-bottom: 3.5vh;
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
-#checkRemember {
-    width: 30px;
-    height: 25px;
-    margin-left: 20px;
-}
 
-.left-text {
-    text-align: left;
-}
-
-.login-icon {
-    height: 35px;
+.login-container .warning{
+    position: relative;
+    right: auto;
     width: auto;
-    margin: 6px;
-    margin-top: -4px;
+    height: 0;
+    color: rgb(240, 109, 109);
+    font-weight: bold;
 }
-
-.remember-forgot{
-    font-size: 12px;
-    margin-right: -25px;
-}
-
 
 
 @media only screen and (max-width: 1440px){
@@ -170,6 +141,16 @@ h1 {
 
     .pictures .right-pic{
         margin-top: 5px;
+    }
+
+    .login-container .warning{
+        height: auto;
+        width: 300px;
+        position: absolute;
+        left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
     }
 }
 
@@ -203,7 +184,7 @@ h1 {
     }
 
     .remember-forgot{
-        font-size: 10px;
+        font-size: 10px; 
         margin-top: 0px;
     }
 
@@ -219,8 +200,6 @@ h1 {
         height: 25px;
         width: auto;
     }
-
-
 
 }
 

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import axios, {AxiosRequestConfig} from "axios";
+import { AuthService } from 'src/app/authentification/auth.service';
+import { MovieModel } from 'src/models/movie-model';
 
 
 @Component({
@@ -9,39 +12,30 @@ import axios, {AxiosRequestConfig} from "axios";
 })
 export class LoginComponent implements OnInit {
 
-  username: string | undefined;
-  password: string | undefined;
-  endpoint: "http://localhost:8081/api/login" | undefined;
+  username: string;
+  password: string;
+  accessToken: string|undefined;
+  refreshToken: string|undefined; 
+  errorMessage: string|undefined;
+  status: boolean|undefined;
+
   ngOnInit(): void {
   }
 
-  onSubmit(){
-
-    const newLoginComponent = {
-      username: this.username,
-      password: this.password
-    }
-    console.log(this.username);
-    console.log(this.password);
-    this.sendData();
+  constructor(private router: Router, public _auth: AuthService) {
+    this.username = "";
+    this.password = "";
   }
 
-  private sendData() {
+  async onSubmit(){
+    console.log(this.username);
+    this._auth.setUsername(this.username);
+    this._auth.setPassword(this.password);
+    this.status = await(this._auth.loginUser());
 
-    axios.get("http://localhost:8081/api/login", {
-      params: {
-        username: this.username,
-        password: this.password
-      }
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    })
-    .then(function () {
-      // always executed
-    });
+    console.log(this.status);
+    if(this.status == true) {
+      this.router.navigate(['/home']);
+    }
   }
 }
