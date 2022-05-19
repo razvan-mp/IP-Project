@@ -31,8 +31,9 @@
         <div class="card-content">
           <div class="content" style="height: 35px">
             <div class="is-pulled-left is-align-self-flex-start">
-              <a class="has-text-weight-semibold is-size-5 is-unselectable" (click)="movie.added(movie)">
-                {{movie.movieAdded ? 'Movie added to watchlist' : 'Add movie to watchlist'}}
+              <a class="has-text-weight-semibold is-size-5 is-unselectable" (click)="this.added(movie)">
+<!--                {{movie.movieAdded ? 'Movie added to watchlist' : 'Add movie to watchlist'}}-->
+                <p>Add movie to watchlist</p>
               </a>
             </div>
             <div

@@ -133,11 +133,3 @@ def get_movie_by_id(request, identifier):
     except Exception as e:
         print(e)
         return HttpResponse(status=500)
-
-@api_view(['POST'])
-def add_to_watched(request):
-    try:
-        pass
-    except Exception as e:
-        print(e)
-        return HttpResponse(status=500)
