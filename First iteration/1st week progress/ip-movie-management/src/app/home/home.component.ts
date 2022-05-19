@@ -13,8 +13,10 @@ export class HomeComponent {
 
 
   newMovieRoute = "http://127.0.0.1:5000/movies/new"
-  movieList: MovieModel[] = [];
-  getMoviesEndpoint = "http://127.0.0.1:8000/api/get_movies/";
+  movieList: MovieModel[] = []
+  getMoviesEndpoint = "http://127.0.0.1:8000/api/get_movies/"
+  movieModalOn: boolean = false
+  movieInModals: MovieModel[] = []
 
   constructor() {
     this.config = {
@@ -55,5 +57,25 @@ export class HomeComponent {
         console.log(response.data.status)
       }
     )
+  }
+
+  showMovieDetails(movie: MovieModel) {
+    console.log(movie)
+  }
+
+  openModal(movie: MovieModel) {
+    this.movieModalOn = true
+    this.movieInModals = []
+    this.movieInModals.push(movie)
+  }
+
+  closeModal() {
+    this.movieModalOn = false
+  }
+
+  getProductionCompanies(movie: MovieModel) {
+    let productionCompanyMiddle = JSON.parse(<string>movie.production_company)
+    let productionCompany = []
+    console.log(productionCompanyMiddle)
   }
 }

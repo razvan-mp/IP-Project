@@ -1,5 +1,5 @@
 export class MovieModel {
-  id: number | undefined;
+  id: number;
   name: string | undefined;
   release_date: string | undefined;
   director: string | undefined;
@@ -13,7 +13,7 @@ export class MovieModel {
   movieAdded: boolean | undefined;
   movieReadMore: boolean | undefined;
 
-  constructor(movie_id: number | undefined, name: string | undefined, release_date: string | undefined, director: string | undefined, imdb_rating: number, run_time: number | undefined, production_company: string | undefined, language: string | undefined, image_url: string | undefined, overview: string | undefined) {
+  constructor(movie_id: number, name: string | undefined, release_date: string | undefined, director: string | undefined, imdb_rating: number, run_time: number | undefined, production_company: string | undefined, language: string | undefined, image_url: string | undefined, overview: string | undefined) {
     this.id = movie_id;
     this.name = name;
     this.release_date = release_date;

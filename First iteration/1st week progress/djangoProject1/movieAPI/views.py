@@ -58,7 +58,7 @@ def populate(request):
 @api_view(['GET'])
 def get_movies(request):
     try:
-        movies = list(Movie.objects.filter(~Q(image_url='https://m.media-amazon.com/images/M/MV5BM2U5OWM5NWQtZDYwZS00NmI3LTk4NDktNzcwZjYzNmEzYWU1XkEyXkFqcGdeQXVyNjMwMjk0MTQ@._V1_UX1024.jpg')).filter(Q(released=True)).all().values())
+        movies = list(Movie.objects.filter(~Q(image_url='https://m.media-amazon.com/images/M/MV5BM2U5OWM5NWQtZDYwZS00NmI3LTk4NDktNzcwZjYzNmEzYWU1XkEyXkFqcGdeQXVyNjMwMjk0MTQ@._V1_UX1024.jpg')).filter(Q(released=True)).all().values())[:10]
 
         return JsonResponse(movies, safe=False)
     except Exception as e:

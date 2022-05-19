@@ -6,7 +6,7 @@
   </div>
   <div class="field">
     <p class="control has-icons-left">
-      <input class="input" type="text" placeholder="Type here to search...">
+      <input class="input" placeholder="Type here to search..." type="text">
     </p>
   </div>
 </section>
@@ -18,21 +18,22 @@
         <div class="card-image add-shadow is-relative has-rounded-corners">
           <figure class="image">
             <div class="is-overlay">
-              <div class="movie-gradient is-unselectable crop"></div>
+              <div (click)="this.openModal(movie)"
+                   class="is-clickable movie-gradient is-unselectable crop img-btn"></div>
               <div
-                class="movie-percentage has-text-centered has-text-weight-bold is-unselectable">{{movie.imdb_rating * 10 + random()}}
+                class="movie-percentage has-text-centered has-text-weight-bold is-unselectable">{{movie.imdb_rating * 10}}
                 <p class="percent-symbol">%</p>
               </div>
               <div class="is-bold is-on-bottom p-3 is-size-3 has-text-weight-bold has-text-white">{{movie.name}}</div>
             </div>
-            <img class="is-unselectable crop" src="{{movie.image_url}}" alt="{{movie.name}}">
+            <img alt="{{movie.name}}" class="is-unselectable crop" src="{{movie.image_url}}">
           </figure>
         </div>
         <div class="card-content">
-          <div class="content" style="height: 35px">
+          <div class="content height-adjusted">
             <div class="is-pulled-left is-align-self-flex-start">
-              <a class="has-text-weight-semibold is-size-5 is-unselectable" (click)="this.added(movie)">
-<!--                {{movie.movieAdded ? 'Movie added to watchlist' : 'Add movie to watchlist'}}-->
+              <a (click)="this.added(movie)" class="has-text-weight-semibold is-size-5 is-unselectable">
+                <!--                {{movie.movieAdded ? 'Movie added to watchlist' : 'Add movie to watchlist'}}-->
                 <p>Add movie to watchlist</p>
               </a>
             </div>
@@ -65,6 +66,57 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="movieModalOn === true">
+    <div *ngFor="let movie of movieInModals">
+      <div class="modal is-active">
+        <div class="modal-background"></div>
+
+        <div class="modal-content p-0 m-0 b-0">
+          <div class="box p-0 m-0 b-0">
+            <div class="card-image add-shadow is-relative has-rounded-corners">
+              <figure class="image">
+                <div class="is-overlay">
+                  <div class="movie-gradient is-unselectable modal-crop"></div>
+                  <div
+                    class="is-bold is-on-bottom p-3 is-size-1 has-text-weight-bold has-text-white">{{movie.name}}</div>
+                </div>
+                <img alt="{{movie.name}}" class="is-unselectable modal-crop" src="{{movie.image_url}}">
+              </figure>
+
+              <div class="card">
+                <div class="card-content">
+                  <p class="has-text-weight-bold is-size-4">
+                    Overview
+                  </p>
+                  <div class="dropdown-divider is-bold"></div>
+                  <p class="is-size-6">
+                    {{movie.overview}}
+                  </p>
+                  <div class="dropdown-divider is-bold"></div>
+
+                  <p class="is-size-6">
+                    <b>Run time: </b> {{movie.run_time}} minutes
+                  </p>
+
+                  <p class="is-size-6">
+                    <b>IMDb Rating: </b> {{movie.imdb_rating}}/10
+                  </p>
+
+                  <p class="is-size-6">
+                    <b>Production company: </b> {{this.getProductionCompanies(movie)}}
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button (click)="this.closeModal()" aria-label="close" class="modal-close is-large"></button>
       </div>
     </div>
   </div>
