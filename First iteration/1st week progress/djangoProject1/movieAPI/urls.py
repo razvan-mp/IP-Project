@@ -10,4 +10,5 @@ urlpatterns = [
     path('get_history/', views.get_history),
     path('get_upcoming/', views.get_upcoming),
     path('get_top10/', views.get_top10),
+    path('get_movie_by_id/<int:identifier>', views.get_movie_by_id),
 ]

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {MovieModel} from "../../models/movie-model";
 import axios, {AxiosRequestConfig} from "axios";
 
@@ -8,11 +8,15 @@ import axios, {AxiosRequestConfig} from "axios";
   styleUrls: ['./home.component.scss']
 })
 
-export class HomeComponent{
+export class HomeComponent {
   config: AxiosRequestConfig
 
-  movieList: MovieModel[] = [];
-  getMoviesEndpoint = "http://127.0.0.1:8000/api/get_movies/";
+
+  newMovieRoute = "http://127.0.0.1:5000/movies/new"
+  movieList: MovieModel[] = []
+  getMoviesEndpoint = "http://127.0.0.1:8000/api/get_movies/"
+  movieModalOn: boolean = false
+  movieInModals: MovieModel[] = []
 
   constructor() {
     this.config = {
@@ -33,5 +37,45 @@ export class HomeComponent{
 
   random() {
     return Math.floor(Math.random() * 10)
+  }
+
+  added(movie: MovieModel) {
+    console.log(movie)
+
+    console.log(window.performance.now() / 0.001)
+
+    console.log(movie)
+
+    let movieInfo = '{"user_id":' + 5 + ',' +
+      '"movie_id":' + movie.id + ',' +
+      '"timestamp":' + window.performance.now() / 0.001 + '}'
+
+    console.log(movieInfo)
+
+    axios.post(this.newMovieRoute, JSON.parse(movieInfo)).then(
+      response => {
+        console.log(response.data.status)
+      }
+    )
+  }
+
+  showMovieDetails(movie: MovieModel) {
+    console.log(movie)
+  }
+
+  openModal(movie: MovieModel) {
+    this.movieModalOn = true
+    this.movieInModals = []
+    this.movieInModals.push(movie)
+  }
+
+  closeModal() {
+    this.movieModalOn = false
+  }
+
+  getProductionCompanies(movie: MovieModel) {
+    let productionCompanyMiddle = JSON.parse(<string>movie.production_company)
+    let productionCompany = []
+    console.log(productionCompanyMiddle)
   }
 }

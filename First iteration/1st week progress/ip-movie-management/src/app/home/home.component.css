@@ -182,4 +182,15 @@ input {
   transition: 1000ms;
 }
 
+.height-adjusted {
+  height: 35px;
+}
+
+.modal-crop {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: 0 25%;
+}
+
 /*# sourceMappingURL=home.component.css.map */
