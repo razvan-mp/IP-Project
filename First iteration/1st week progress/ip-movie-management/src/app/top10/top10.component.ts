@@ -15,7 +15,7 @@ export class Top10Component implements OnInit {
   getTop10Endpoint = "http://127.0.0.1:5000/movies/1"
   getMovieByIdEndpoint = "http://127.0.0.1:8000/api/get_movie_by_id"
 
-  private movieIds: number[] = [];
+  private _movieIds: number[] = [];
   public slides: MovieModel[] = [];
   public animations = ['slide', 'fade', 'none'];
 
@@ -25,8 +25,8 @@ export class Top10Component implements OnInit {
 
   public addSlides() {
     axios.get(this.getTop10Endpoint).then(response => {
-        this.movieIds = response.data;
-        console.log(this.movieIds)
+        this._movieIds = response.data;
+        console.log(this._movieIds)
         this.populateSlides();
       }
     ).catch()
@@ -35,12 +35,16 @@ export class Top10Component implements OnInit {
 
   private populateSlides() {
     for (let index = 0; index < 10; index++) {
-      let httpReq = this.getMovieByIdEndpoint + "/" + this.movieIds[index]
+      let httpReq = this.getMovieByIdEndpoint + "/" + this._movieIds[index]
       console.log(httpReq)
       axios.get(httpReq).then(response => {
         this.slides.push(response.data)
       }).catch()
     }
     console.log(this.slides)
+  }
+
+  get movieIds(): number[] {
+    return this._movieIds;
   }
 }
