@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-login.component.scss']
 })
 export class NavLoginComponent implements OnInit {
+
+  constructor() { }
+
   ngOnInit(): void {
-    console.log()
   }
+
 }

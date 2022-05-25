@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./remove-user.component.scss']
 })
 export class RemoveUserComponent implements OnInit {
+
+  constructor() { }
+
   ngOnInit(): void {
-    console.log()
   }
+
 }

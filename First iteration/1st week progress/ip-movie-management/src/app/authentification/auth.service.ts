@@ -14,10 +14,14 @@ export class AuthService {
   private user : User;
   public token : string|undefined;
 
-  constructor(private router: Router) {
+  constructor(private router: Router) { 
     this.user = new User();
     MovieModel.setAuth(this);
     MovieModel.setRouter(router);
+    // this.user.id = 0;
+    // this.user.username = "";
+    // this.user.password = "";
+    // this.user.email = "";
   }
 
   async loginUser() {
@@ -40,8 +44,9 @@ export class AuthService {
     .catch( (error) => {
       this.errorMessage = error;
     })
-    .then());
-
+    .then(function () {
+    }));
+    
     return returnValue;
   }
 

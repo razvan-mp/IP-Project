@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import axios from "axios";
+import axios, {AxiosRequestConfig} from "axios";
 
 @Component({
   selector: 'app-register',
@@ -19,15 +19,16 @@ export class RegisterComponent implements OnInit {
   response: string|undefined;
   list: []|undefined;
 
+  constructor() { }
+
   ngOnInit(): void {
-    console.log()
   }
 
   onSubmit(){
-
+  
     this.errorMessage="";
 
-    this.sendData();
+    this.sendData();    
     console.log(this.response);
   }
 
@@ -46,6 +47,7 @@ export class RegisterComponent implements OnInit {
       console.log(json);
       axios.post("http://localhost:8081/api/registration", json, {
         headers: {
+          // Overwrite Axios's automatically set Content-Type
           'Content-Type': 'application/json'
         }
       })
@@ -53,9 +55,11 @@ export class RegisterComponent implements OnInit {
         this.response = response.data.token;
         console.log(response);
       })
-      .catch( (_error) => {
+      .catch( (error) => {
+        //this.errorMessage=error;
       })
       .then(function () {
+        // always executed
       });
     }
     else

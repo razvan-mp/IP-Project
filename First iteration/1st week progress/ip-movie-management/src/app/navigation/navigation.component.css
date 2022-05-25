@@ -34,11 +34,7 @@ a.navbar-item::after {
   width: 100%;
   height: 0.1em;
   background-color: darkorange;
-  opacity: 0;
   transition: opacity 300ms, transform 300ms;
-}
-
-a.navbar-item::after {
   opacity: 1;
   transform: scale(0);
   transform-origin: center;
@@ -50,6 +46,8 @@ a.navbar-item:focus::after {
 }
 
 .navbar-menu {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   height: 60px;
 }
 
@@ -78,11 +76,6 @@ a:active {
 
 .has-text-green {
   color: forestgreen;
-}
-
-.navbar-menu {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 .resize-nav {

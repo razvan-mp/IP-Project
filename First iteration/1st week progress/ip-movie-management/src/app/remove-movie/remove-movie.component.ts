@@ -10,13 +10,16 @@ export class RemoveMovieComponent implements OnInit {
 
   removeMovieEndpoint = "http://127.0.0.1:8000/api/delete_movie/"
 
+  constructor() { }
+
   ngOnInit(): void {
-    console.log()
   }
 
   deleteMovie(event: SubmitEvent, movieForm: HTMLFormElement) {
     event.preventDefault()
     let formData = new FormData(movieForm)
+    // console.log(formData)
+    // console.dir(formData.getAll("name"))
     let movieObject = Object.fromEntries(formData as any) as any
     let body = {
       data: {

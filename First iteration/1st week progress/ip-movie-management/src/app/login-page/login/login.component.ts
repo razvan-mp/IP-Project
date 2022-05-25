@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import axios, {AxiosRequestConfig} from "axios";
 import { AuthService } from 'src/app/authentification/auth.service';
-
+import { MovieModel } from 'src/models/movie-model';
 
 @Component({
   selector: 'app-login',
@@ -13,12 +14,11 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
   accessToken: string|undefined;
-  refreshToken: string|undefined;
+  refreshToken: string|undefined; 
   errorMessage: string|undefined;
   status: boolean|undefined;
 
   ngOnInit(): void {
-    console.log()
   }
 
   constructor(private router: Router, public _auth: AuthService) {
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     this.status = await(this._auth.loginUser());
 
     console.log(this.status);
-    if(this.status) {
+    if(this.status == true) {
       this.router.navigate(['/home']);
     }
   }

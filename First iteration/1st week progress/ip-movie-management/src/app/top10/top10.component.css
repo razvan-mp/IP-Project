@@ -45,6 +45,8 @@
 }
 .igx-card-actions a:hover {
   background-color: rgba(255, 138, 71, 0.2);
+  all: unset !important;
+  color: darkorange;
 }
 
 .card {
@@ -80,10 +82,4 @@ section {
   outline: 1px solid darkorange;
   border: none;
 }
-
-.igx-card-actions a:hover {
-  all: unset !important;
-  color: darkorange;
-}
-
 /*# sourceMappingURL=top10.component.css.map */

@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./white-user.component.scss']
 })
 export class WhiteUserComponent implements OnInit {
+
+  constructor() { }
+
   ngOnInit(): void {
-    console.log()
   }
+
 }

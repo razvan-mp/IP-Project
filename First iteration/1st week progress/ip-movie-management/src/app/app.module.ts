@@ -30,6 +30,9 @@ import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {
   IgxCarouselModule,
+  IgxIconModule,
+  IgxSelectModule,
+  IgxButtonModule,
   IgxCardModule
 } from "igniteui-angular";
 import { AuthGuard } from './guards/auth.guard';

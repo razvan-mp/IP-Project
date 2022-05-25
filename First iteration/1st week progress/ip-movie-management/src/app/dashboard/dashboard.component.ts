@@ -10,8 +10,9 @@ export class DashboardComponent implements OnInit {
 
   addMovieEndpoint = "http://127.0.0.1:8000/api/add_movie/"
 
+  constructor() { }
+
   ngOnInit(): void {
-    console.log()
   }
 
   submitMovieForm(event: Event, movieForm: HTMLFormElement) {

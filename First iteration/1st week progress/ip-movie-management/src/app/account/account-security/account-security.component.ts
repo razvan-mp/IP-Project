@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./account-security.component.css','../account.component.scss']
 })
 export class AccountSecurityComponent implements OnInit {
+
+  constructor() { }
+
   ngOnInit(): void {
-    console.log("Account Security opened")
   }
+
 }

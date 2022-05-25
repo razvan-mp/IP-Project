@@ -25,7 +25,6 @@ export class HistoryPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log()
   }
 
   private getHistory() {
