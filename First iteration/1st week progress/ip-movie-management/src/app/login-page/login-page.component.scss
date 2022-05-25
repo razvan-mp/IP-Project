@@ -84,8 +84,7 @@
 .login-container button {
     border-radius: 5px;
     margin: 4px;
-    border: none;
-    width: 80%;
+    border: none;;
     outline: none;
     transition: color .2s ease-in-out, box-shadow .2s ease-in-out, background-color .2s ease-in-out;
     padding: 10px;
@@ -184,8 +183,8 @@ a {
     }
 
     .remember-forgot{
-        font-size: 10px; 
-        margin-top: 0px;
+        font-size: 10px;
+        margin-top: 0;
     }
 
     .remember-forgot:last-child{

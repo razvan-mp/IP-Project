@@ -41,7 +41,7 @@
               class="is-pulled-right is-flex is-flex-direction-row is-justify-content-flex-end is-align-self-flex-end">
               <div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
-                  <img class="icon is-medium" src="assets/icons/heart.svg">
+                  <img class="icon is-medium" src="assets/icons/heart.svg" alt="Heart">
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu-like" role="menu">
                   <div class="dropdown-content">
@@ -53,7 +53,7 @@
               </div>
               <div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
-                  <img class="icon is-medium" src="assets/icons/dislike.svg">
+                  <img class="icon is-medium" src="assets/icons/dislike.svg" alt="Dislike">
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu-dislike" role="menu">
                   <div class="dropdown-content">
@@ -99,19 +99,19 @@
                   <div class="dropdown-divider is-bold"></div>
 
                   <p class="is-size-6">
-                    <b>Released: </b> {{movie.release_date}}
+                    <strong>Released: </strong> {{movie.release_date}}
                   </p>
 
                   <p class="is-size-6">
-                    <b>Run time: </b> {{movie.run_time}} minutes
+                    <strong>Run time: </strong> {{movie.run_time}} minutes
                   </p>
 
                   <p class="is-size-6">
-                    <b>IMDb Rating: </b> {{movie.imdb_rating}}/10
+                    <strong>IMDb Rating: </strong> {{movie.imdb_rating}}/10
                   </p>
 
                   <p class="is-size-6">
-                    <b>Production company: </b> <i>{{this.getProductionCompanies(movie)}}</i>
+                    <strong>Production company: </strong> <em>{{this.getProductionCompanies(movie)}}</em>
                   </p>
 
                 </div>

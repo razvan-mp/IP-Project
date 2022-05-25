@@ -19,16 +19,8 @@ $desktop: 1024px;
   border-radius: 15px;
 }
 
-.card__caption {
-  margin-top: 120px;
-}
-
 .card-image {
   margin-left: -25px;
-}
-
-.card__snippet {
-  margin: 85px 0 !important;
 }
 
 html {
@@ -56,7 +48,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  margin: 20px 0 80px;
+  margin: -18px 0 80px;
 }
 
 .card {
@@ -117,6 +109,7 @@ body {
   }
 
   &__caption {
+    margin-top: 120px;
     position: absolute;
     top: 50%;
     z-index: 1;
@@ -146,9 +139,9 @@ body {
   }
 
   &__snippet {
+    margin: 85px 0 !important;
     display: -webkit-box;
     max-height: 150px;
-    margin: 20px 0;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -199,10 +192,6 @@ body {
     color: #755D87;
     text-decoration: none;
   }
-}
-
-.container {
-  margin-top: -18px;
 }
 
 .section {

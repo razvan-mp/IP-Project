@@ -86,7 +86,6 @@
   border-radius: 5px;
   margin: 4px;
   border: none;
-  width: 80%;
   outline: none;
   transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
   padding: 10px;

@@ -13,6 +13,7 @@ export class NavigationComponent implements OnInit {
   constructor(public _auth: AuthService) { }
 
   ngOnInit(): void {
+    console.log()
   }
 
   clickBurger(e: any) {
@@ -30,9 +31,8 @@ export class NavigationComponent implements OnInit {
       console.log('removed is-active class')
     }
   }
-  
+
   logout() {
     this._auth.logout();
-    // window.location.reload();
   }
 }

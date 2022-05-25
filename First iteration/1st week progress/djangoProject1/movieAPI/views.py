@@ -58,7 +58,7 @@ def populate(request):
 @api_view(['GET'])
 def get_movies(request):
     try:
-        movies = list(Movie.objects.filter(~Q(image_url='https://m.media-amazon.com/images/M/MV5BM2U5OWM5NWQtZDYwZS00NmI3LTk4NDktNzcwZjYzNmEzYWU1XkEyXkFqcGdeQXVyNjMwMjk0MTQ@._V1_UX1024.jpg')).filter(Q(released=True)).all().values())[:10]
+        movies = list(Movie.objects.filter(~Q(image_url='linklaposter')).filter(Q(released=True)).all().values())[:10]
 
         return JsonResponse(movies, safe=False)
     except Exception as e:
@@ -107,7 +107,7 @@ def get_history(request):
 @api_view(['GET'])
 def get_upcoming(request):
     try:
-        movies = list(Movie.objects.filter(~Q(released=True)).all().values())[:4]
+        movies = list(Movie.objects.filter(~Q(released=False)).filter(~Q(image_url='linklaposter')).all().values())[:4]
         return JsonResponse(movies, safe=False)
     except Exception as e:
         print(e)

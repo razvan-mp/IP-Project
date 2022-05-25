@@ -35,10 +35,6 @@ export class HomeComponent {
     ).catch()
   }
 
-  random() {
-    return Math.floor(Math.random() * 10)
-  }
-
   added(movie: MovieModel) {
     console.log(movie)
 
