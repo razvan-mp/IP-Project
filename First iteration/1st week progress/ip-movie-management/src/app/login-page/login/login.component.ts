@@ -30,10 +30,9 @@ export class LoginComponent implements OnInit {
     console.log(this.username);
     this._auth.setUsername(this.username);
     this._auth.setPassword(this.password);
-    this.status = await(this._auth.loginUser());
+    this.status = true;
 
-    console.log(this.status);
-    if(this.status == true) {
+    if(await(this._auth.loginUser()) == true) {
       this.router.navigate(['/home']);
     }
   }

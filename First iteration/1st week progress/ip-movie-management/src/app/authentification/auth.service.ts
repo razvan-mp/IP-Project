@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import axios from 'axios';
 import { MovieModel } from 'src/models/movie-model';
 import { User } from '../model/user';
+import { JwtHelperService } from '@auth0/angular-jwt';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +13,7 @@ export class AuthService {
   errorMessage: string|undefined;
 
   private _loginUrl = "http://localhost:8081/api/login"
+  private _userGet = "http://localhost:8081/api/user/get"
   private user : User;
   public token : string|undefined;
 
@@ -37,16 +40,21 @@ export class AuthService {
       }
     })
     .then( (response) => {
-      localStorage.setItem("accessToken", response.data.access_token);
       this.token = response.data.access_token;
+      const helper = new JwtHelperService();
+      const decodeToken = helper.decodeToken(this.token);
+      localStorage.setItem("accessToken", response.data.access_token);
       returnValue =  true;
+      console.log(returnValue);
+      console.log(returnValue);
     })
     .catch( (error) => {
       this.errorMessage = error;
     })
     .then(function () {
     }));
-    
+    console.log(returnValue);
+    console.log(returnValue);
     return returnValue;
   }
 

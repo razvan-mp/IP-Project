@@ -33,6 +33,6 @@ export class NavigationComponent implements OnInit {
   
   logout() {
     this._auth.logout();
-    // window.location.reload();
+    window.location.reload();
   }
 }

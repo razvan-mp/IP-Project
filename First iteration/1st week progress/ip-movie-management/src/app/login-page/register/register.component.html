@@ -14,12 +14,8 @@
                     <input type="text" id="Email" name="email" [(ngModel)]="email" placeholder="Email"><br>
                     <input type="password" id="Password" name="password" [(ngModel)]="password" placeholder="Password"><br>
                     <input type="password" id="password" name="r_password" [(ngModel)]="repeatPassword" placeholder="Repeat password"><br>
-
-
-
-              
                 <div *ngIf="errorMessage" class="warning">
-                    <p>Password and RepeatPassword not matching!</p>
+                    <p>{{errorMessage}}</p>
                   </div>
                   <br>
                   <br>

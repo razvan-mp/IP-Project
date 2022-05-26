@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import axios, {AxiosRequestConfig} from "axios";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -19,17 +20,17 @@ export class RegisterComponent implements OnInit {
   response: string|undefined;
   list: []|undefined;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(){
+  async onSubmit(){
   
     this.errorMessage="";
+    this.response="";
 
     this.sendData();    
-    console.log(this.response);
   }
 
   private sendData() {
@@ -52,7 +53,17 @@ export class RegisterComponent implements OnInit {
         }
       })
       .then( (response) => {
-        this.response = response.data.token;
+        this.response = response.data;
+        console.log("sadfsadsaf");
+        console.log(this.response);
+        console.log("asdasdasfas");
+        if(this.response?.indexOf("V-ati inregistrat cu succes cu numele de utilizator")!=-1) {
+          this.router.navigate(['/login-page/login']);
+        }
+        else {
+          this.errorMessage = this.response;
+        }
+
         console.log(response);
       })
       .catch( (error) => {
