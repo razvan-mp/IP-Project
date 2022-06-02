@@ -57,6 +57,7 @@ export class AuthService {
 
   public logout() {
     localStorage.removeItem("accessToken");
+    localStorage.removeItem("username");
     this.token = "";
   }
 
@@ -70,7 +71,6 @@ export class AuthService {
 
   async getUserData() {
     this.errorMessage = "";
-
     let returnValue: boolean;
     returnValue = false;
 
@@ -81,7 +81,7 @@ export class AuthService {
 
     await(axios.get(this._userGet, {
       headers: {
-        "Bearer": aToken,
+        "Authorization": "Bearer " + aToken,
       },
       params: {
         username: this.user.username
@@ -93,14 +93,22 @@ export class AuthService {
       this.user.id = response.data.id;
       this.user.name = response.data.name;
       this.user.admin = false;
-      response.data.authorities.forEach((element: string) => {
-        if(element.localeCompare("ROLE_ADMIN") == 0) {
+      console.log(this.user.admin);
+      if(this.user.id==null)
+      this.user.id=0;
+
+      localStorage.setItem("id",this.user.id.toString());
+      response.data.authorities.forEach((element: { authority: any; },index: any)=>{
+        if(element.authority=="ROLE_ADMIN"){
           this.user.admin = true;
         }
-      });
-    })
+       }
+      )
+    }
+    )
     .catch( (error) => {
       this.errorMessage = error;
+      console.log(error);
     })
     .then(function () {
     }));
@@ -115,16 +123,20 @@ export class AuthService {
     }
 
     const json = JSON.stringify(userData);
-    axios.post("http://localhost:8081/api/registration", json, {
+    axios.put("http://localhost:8081/api/user/update/"+ localStorage.getItem("id") , json, {
       headers: {
-        'Bearer': aToken,
+        "Authorization": "Bearer " +aToken,
         'Content-Type': 'application/json'
-      }
+      },
+      data:JSON.stringify(userSendData)
     })
     .then( (response) => {
       let responseStr = response.data;
       if(responseStr?.indexOf("succes")!=-1) {
         location.reload();
+        if(userData.username==null)
+         userData.username="";
+        localStorage.setItem("username",userData.username);
       }
       else {
         errorMessage = true;
