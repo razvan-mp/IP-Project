@@ -42,4 +42,8 @@ export class NavigationComponent implements OnInit {
       this.router.navigate(['/dashboard']);
     }
   }
+
+  readLocalStorageValue(key: string) {
+    return localStorage.getItem(key);
+  }
 }

@@ -22,9 +22,9 @@
         Upcoming
       </a>
     </div>
-    <div class="navbar-end ml-5" *ngIf="this._auth.token">
+    <div class="navbar-end ml-5" *ngIf="readLocalStorageValue('accessToken') != null">
       <div class="navbar-item mr-5 has-text-orange dropdown is-hoverable">
-        <a class="hi-user has-text-weight-bold" >Hi, user
+        <a class="hi-user has-text-weight-bold" >Hi, {{readLocalStorageValue('username')}}
         </a>
         <div class="dropdown-trigger">
           <img class="is-dropdown pl-5" src="assets/images/mock-user.png" alt="Click for settings">
@@ -57,7 +57,7 @@
         </div>
       </div>
     </div>
-    <a routerLink="/login-page/login" *ngIf="!this._auth.token">
+    <a routerLink="/login-page/login" *ngIf="readLocalStorageValue('accessToken') == null">
       <div class="has-text-green panel is-shadowless pt-4 pr-5">
         Log in
       </div>

@@ -1,7 +1,7 @@
 .profile_info {
   height: 550px;
   display: flex;
-  /* background-color: #C5BBBB;  */
+  flex-direction: column;
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 10px 2px #d8d8d8;
@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 60%;
+  width: 100%;
   padding: 0 1em 0 1em;
 }
 
@@ -97,14 +97,6 @@
   width: 50%;
 }
 
-.photo {
-  border: 4px solid #d8d8d8;
-  box-shadow: 0 0px 150px 10px rgba(150, 146, 146, 0.37);
-  border-radius: 100%;
-  height: 60%;
-  width: auto;
-  align-self: center;
-}
 
 @media only screen and (max-width: 1000px) {
   .profile_info {
@@ -116,10 +108,6 @@
   .card-form {
     width: 100%;
     margin-bottom: 2em;
-  }
-
-  .profile_photo {
-    width: 100%;
   }
 
   #delete-button {

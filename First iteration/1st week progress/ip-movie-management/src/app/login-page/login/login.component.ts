@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   async onSubmit(){
+    localStorage.setItem("username",this.username);
     this._auth.setUsername(this.username);
     this._auth.setPassword(this.password);
     this.status = true;

@@ -46,16 +46,12 @@ export class AuthService {
       const decodeToken = helper.decodeToken(this.token);
       localStorage.setItem("accessToken", response.data.access_token);
       returnValue =  true;
-      console.log(returnValue);
-      console.log(returnValue);
     })
     .catch( (error) => {
       this.errorMessage = error;
     })
     .then(function () {
     }));
-    console.log(returnValue);
-    console.log(returnValue);
     return returnValue;
   }
 
@@ -108,7 +104,6 @@ export class AuthService {
     })
     .then(function () {
     }));
-    console.log(this.user);
   }
 
   async updateUser(userData: userSendData) {

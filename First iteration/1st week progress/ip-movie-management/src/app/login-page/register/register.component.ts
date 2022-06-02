@@ -45,7 +45,6 @@ export class RegisterComponent implements OnInit {
       }
 
       const json = JSON.stringify(user);
-      console.log(json);
       axios.post("http://localhost:8081/api/registration", json, {
         headers: {
           // Overwrite Axios's automatically set Content-Type
@@ -54,17 +53,12 @@ export class RegisterComponent implements OnInit {
       })
       .then( (response) => {
         this.response = response.data;
-        console.log("sadfsadsaf");
-        console.log(this.response);
-        console.log("asdasdasfas");
         if(this.response?.indexOf("V-ati inregistrat cu succes cu numele de utilizator")!=-1) {
           this.router.navigate(['/login-page/login']);
         }
         else {
           this.errorMessage = this.response;
         }
-
-        console.log(response);
       })
       .catch( (error) => {
         //this.errorMessage=error;
