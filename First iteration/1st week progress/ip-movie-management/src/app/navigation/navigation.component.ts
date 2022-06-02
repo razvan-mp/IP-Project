@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../authentification/auth.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class NavigationComponent implements OnInit {
 
   burgerClicked: boolean = false
 
-  constructor(public _auth: AuthService) { }
+  constructor(private router: Router, public _auth: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -34,5 +35,11 @@ export class NavigationComponent implements OnInit {
   logout() {
     this._auth.logout();
     window.location.reload();
+  }
+
+  adminCheck() {
+    if(this._auth.user.admin == true) {
+      this.router.navigate(['/dashboard']);
+    }
   }
 }

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import axios, {AxiosRequestConfig} from "axios";
 import { AuthService } from 'src/app/authentification/auth.service';
-import { MovieModel } from 'src/models/movie-model';
 
 @Component({
   selector: 'app-login',
@@ -27,12 +25,12 @@ export class LoginComponent implements OnInit {
   }
 
   async onSubmit(){
-    console.log(this.username);
     this._auth.setUsername(this.username);
     this._auth.setPassword(this.password);
     this.status = true;
 
     if(await(this._auth.loginUser()) == true) {
+      await(this._auth.getUserData());
       this.router.navigate(['/home']);
     }
   }

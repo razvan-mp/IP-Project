@@ -6,17 +6,16 @@
     <form class="card-form">
       <div class="input">
         <label class="input-label">Old password:</label>
-        <input type="password" class="input-field" placeholder="Old Password" required/>
+        <input type="password" class="input-field" placeholder="Old Password" required id="passwordInputOld"/>
 
       </div>
       <div class="input">
         <label class="input-label">New password:</label>
-        <input type="password" class="input-field" placeholder="New Password" required/>
-
+        <input type="password" class="input-field" placeholder="New Password" required id="passwordInput"/>
       </div>
 
       <div class="action">
-        <span><button class="save-button">Save</button></span>
+        <span><button class="save-button" onclick="update()">Save</button></span>
       </div>
 
     </form>
